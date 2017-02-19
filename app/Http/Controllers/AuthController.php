@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Socialite;
 use Auth;
 use App\User;
+use App\UserDetail;
+
 
 class AuthController extends Controller
 {
@@ -30,8 +32,10 @@ class AuthController extends Controller
         $user = Socialite::driver('facebook')->user();
        
         $authUser = $this->findOrCreateUser($user);
-        Auth::login($authUser, true);
         
+        Auth::login($authUser, true);
+        Auth::guard('api')->user();
+        return redirect()->route('home');
     }
 
 
@@ -48,10 +52,12 @@ class AuthController extends Controller
         if ($authUser) {
             return $authUser;
         }
-        return User::create([
+        $user = User::create([
             'name'     => $user->name,
             'email'    => $user->email,   
             'facebook_id' => $user->id
-        ]);
+        ]);       
+
+        return $user;
      }
 }
