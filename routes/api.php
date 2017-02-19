@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::middleware('auth:web')->get('getAllTeam',  'ApiController@getAllTeam' );
+Route::get('getTeam',  'ApiController@getTeamAll' );
+Route::get('getTeam/{team}',  'ApiController@getTeam' );
+Route::post('register',  'ApiController@userDetail' );
