@@ -16,8 +16,7 @@ class CreateOrdersTable extends Migration
        Schema::create('orders', function (Blueprint $table) {
               
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-
+            $table->string('facebook_id',50);
             $table->enum('payment_status',['pay', 'not-pay']);
             $table->enum('receive_type',['own', 'zip']);
             $table->string('address', 250)->nullable();

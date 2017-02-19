@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\UserDetail;
-
+use App\User;
+use App\OrdersDetail;
+use App\Orders;
 class ApiController extends Controller
 {
     /**
@@ -16,6 +18,20 @@ class ApiController extends Controller
     public function __construct()
     {
       
+    }
+
+   public function getuser(Request $request,$facebookId) {
+
+           if (!$facebookId) {
+                return response()->json([
+                    'error' => "Bad Request"
+                ], 400 );
+            }
+
+          
+        $user = User::where('facebook_id', $facebookId)->first();
+
+        return response()->json($user, 200);                        
     }
 
     /**
@@ -102,6 +118,64 @@ class ApiController extends Controller
         return response()->json($userDetail, 200);         
         
     }
+
+
+    public function createOrder(Request $request){
+        $orderList = $request->input('order');
+        $facebook_id = $request->input('facebook_id');
+        $receive_type = $request->input('receive_type');
+        $address = $request->input('address','');
+
+        $provice = $request->input('provice','');
+        $zip_code = $request->input('zip_code','');
+       
+
+        if(!$facebook_id || !$receive_type || !$orderList ){
+              return response()->json([
+                    'error' => "Bad Request"
+                ], 400 );
+        }
+
+        if($receive_type=='zip' && (!$address || !$provice ||!$zip_code)){
+              return response()->json([
+                    'error' => "Bad Request"
+                ], 400 );
+        }
+       
+        $orders = Orders::where('facebook_id', $facebook_id)->first();
+        $orders= Orders::create([                          
+                            'facebook_id'  => $facebook_id,   
+                            'receive_type' => $receive_type,
+                            'address' => $address,
+                            'provice' => $provice,
+                            'zip_code' => $zip_code
+                        ]);    
+
+      foreach( $orderList as $obj) {
+        //echo  $obj['productCode'] .  $obj['size'] . $obj['aaa']     ;
+        $productCode = array_key_exists ( 'productCode' , $obj) ?$obj['productCode']  : '';
+        $size = array_key_exists ( 'size' , $obj) ?$obj['size']  : '';
+        $amount = array_key_exists( 'amount' , $obj) ?$obj['amount']  : 0;
+
+         OrdersDetail::create([                          
+                            'facebook_id'  => $facebook_id,   
+                            'product_code' => $productCode,
+                            'size' => $size,
+                            'amount' => $amount,
+                            'orders_id'=> $orders->id
+            ]);  
+
+
+       }
+
+
+       return response()->json($orders, 200 );
+
+       
+
+    }
+
+
 
 
 
