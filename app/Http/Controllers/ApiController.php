@@ -41,7 +41,7 @@ class ApiController extends Controller
      */
     public function getTeamAll()
     {
-      
+       
         $teamA= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
                                   ->where('team', 'a')
                                   ->orderBy('generation', 'desc')->get();
@@ -110,7 +110,7 @@ class ApiController extends Controller
         $userDetail= UserDetail::create([
             'nikcname'   => $nickname,
             'facebook_id'  => $facebook_id,   
-            'team' => 'a',
+            'team' => $this->randomTeam(),
             'generation' => $generation,
             'join_event' => $joinEvent
         ]);       
@@ -121,6 +121,7 @@ class ApiController extends Controller
 
 
     public function createOrder(Request $request){
+        
         $orderList = $request->input('order');
         $facebook_id = $request->input('facebook_id');
         $receive_type = $request->input('receive_type');
@@ -169,10 +170,40 @@ class ApiController extends Controller
        }
 
 
-       return response()->json($orders, 200 );
+
+    
+      return response()->json($orders, 200 );
 
        
 
+    }
+
+
+    private function randomTeam(){
+        $count = array('a' => 0, 'b' => 0, 'c' => 0,'d'=>0);
+        $teams = array('a' => 6.25, 'b' => 6.25, 'c' => 6.25,'d'=>6.25);
+        $myTeam ="";
+        $sumCount =0;
+        $countTeamObj=DB::table('user_details')->select(DB::raw('team , count(*) as teamCount')) ->groupBy('team') ->get();
+        
+        foreach ($countTeamObj as $obj) {
+          //  var_dump($obj);
+            $count[$obj->team]= $obj->teamCount;
+            $sumCount += $obj->teamCount;
+        }
+
+        foreach ($teams as $team=>$value) {
+            $teams[$team] = (($sumCount+1-$count[$team])/($sumCount+1)/3)*25;
+        }
+          
+        $tempTeam = array();
+        foreach ($teams as $team=>$value)   {
+                $tempTeam = array_merge($tempTeam, array_fill(0, $value, $team));
+        }
+
+        $myTeam = $tempTeam[array_rand($tempTeam)];
+        
+        return $myTeam;
     }
 
 
