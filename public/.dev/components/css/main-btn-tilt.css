@@ -1,0 +1,64 @@
+.main-btn-tilt {
+    display: inline-block;
+    position: relative;
+    /* Used to controle the box size */
+    font-size: 13.5px;
+}
+
+.main-btn-tilt .main-btn-tilt-border {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/tag_name_back.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-btn-tilt .main-btn-tilt-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/tag_name.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-btn-tilt .main-btn-tilt-shadow {
+    position: absolute;
+    top: .5em;
+    left: .8em;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/tag_name_back.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-btn-tilt .main-btn-tilt-label {
+    position: relative;
+    padding: 2.3em;
+}
+
+.main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
+    font-size: 1.9em;
+    font-weight: bold;
+    -ms-transform: rotate(-2.5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-2.5deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-2.5deg);
+}
+
+.main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content .main-btn-tilt-text {
+    display: inline-block;
+    position: relative;
+    top: 0.05em;
+    color: black;
+}
