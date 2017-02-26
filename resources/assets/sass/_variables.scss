@@ -1,6 +1,6 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #fff;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -36,3 +36,27 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+$home-bg : #FFF174;
+
+//colors
+$white: #fff;
+$black: black;
+$team_red :#EF4036;
+$team_blue : #69C8CC;
+$team_green: #C9DB50;
+$team_orange : #F7901D;
+$team_yellow : #FFD429;
+
+$register_bg : #F1F1F2;
+
+//urls
+$url_facebooklogin_back: url(../../../public/img/facebooklogin_back.svg);
+$url_facebooklogin: url(../../../public/img/facebooklogin.svg);
+$url_navborder: url(../../../public/img/bar.svg);
+$url_bg_profile2: url(../../../public/img/bg_profile2.svg);
+$url_bg_profile1: url(../../../public/img/bg_profile1.svg);
+$url_Re: url(../../../public/img/Re.svg);
+$url_bg_line: url(../../../public/img/bg_line.svg);
+$url_name_back: url(../../../public/img/tag_name_back.svg);
+$url_name: url(../../../public/img/tag_name.svg);

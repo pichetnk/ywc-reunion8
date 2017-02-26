@@ -10,13 +10,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 })->name('index');
-Route::get('facebook-login', ['uses' => 'AuthController@redirectToFacebook']);
+*/
+Route::get('facebook-login', ['uses' => 'AuthController@redirectToFacebook'])->name('facebook-login');
 Route::get('fb-callback', ['uses' => 'AuthController@handleFacebookCallback']);
  
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+Route::get('/timeline', function () {
+    return view('timeline');
+})->name('timeline');
+
+Route::get('/team', function () {
+    return view('team');
+})->name('team');
+Route::get('/register', function () {
+    return view('register');    
+})->name('register');
+
+Route::get('/profile',['uses' => 'TeamController@profile'])->name('profile');
+

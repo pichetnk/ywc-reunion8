@@ -42,27 +42,32 @@ class ApiController extends Controller
     public function getTeamAll()
     {
        
-        $teamA= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
-                                  ->where('team', 'a')
+        $teamRed= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'r')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamB= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamBlue= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
                                   ->where('team', 'b')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamC= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
-                                  ->where('team', 'c')
+        $teamGreen= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'g')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamD= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
-                                  ->where('team', 'd')
+        $teamOrange= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'o')
                                   ->orderBy('generation', 'desc')->get();
+        $teamYellow= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'y')
+                                  ->orderBy('generation', 'desc')->get();
+                            
 
        return response()->json([
-                'a' => $teamA,
-                'b' => $teamB,
-                'c' => $teamC,
-                'd' => $teamD
+                'r' => $teamRed,
+                'b' => $teamBlue,
+                'g' => $teamGreen,
+                'o' => $teamOrange,
+                'y' => $teamYellow
             ], 200);
 
     }
@@ -70,7 +75,7 @@ class ApiController extends Controller
 
     public function getTeam(Request $request,$team) {
 
-           $listTeam = array('a','b','c','d');
+           $listTeam = array('r','b','g','o','y');
 
            if (!in_array($team, $listTeam)) {
                 return response()->json([
@@ -86,7 +91,7 @@ class ApiController extends Controller
     }
 
 
-    public function userDetail(Request $request){
+    public function register(Request $request){
 
         $facebook_id = $request->input('facebook_id');
         $nickname = $request->input('nickname');
@@ -96,15 +101,17 @@ class ApiController extends Controller
 
         if(!$facebook_id || !$nickname || !$generation  || !$joinEvent ){
               return response()->json([
-                    'error' => "Bad Request"
-                ], 400 );
+                    'error' => "Bad Request",
+                    'error_code' => "00"
+                ], 200 );
         }
 
         $userDetail = UserDetail::where('facebook_id', $facebook_id)->first();
         if ($userDetail) {
             return response()->json([
-                    'error' => "Bad Request this user register Done"
-                ], 400 );
+                    'error' => "Bad Request this user register Done",
+                    'error_code' => "01"
+                ], 200 );
         }
         
         $userDetail= UserDetail::create([
@@ -114,6 +121,8 @@ class ApiController extends Controller
             'generation' => $generation,
             'join_event' => $joinEvent
         ]);       
+    
+        
 
         return response()->json($userDetail, 200);         
         
@@ -180,8 +189,8 @@ class ApiController extends Controller
 
 
     private function randomTeam(){
-        $count = array('a' => 0, 'b' => 0, 'c' => 0,'d'=>0);
-        $teams = array('a' => 6.25, 'b' => 6.25, 'c' => 6.25,'d'=>6.25);
+        $count = array('r'=>0,'b'=>0,'g'=>0,'o'=>0,'y'=>0);
+        $teams = array('r'=>5,'b'=>5,'g'=>5,'o'=>5,'y'=>5);
         $myTeam ="";
         $sumCount =0;
         $countTeamObj=DB::table('user_details')->select(DB::raw('team , count(*) as teamCount')) ->groupBy('team') ->get();
@@ -193,7 +202,7 @@ class ApiController extends Controller
         }
 
         foreach ($teams as $team=>$value) {
-            $teams[$team] = (($sumCount+1-$count[$team])/($sumCount+1)/3)*25;
+            $teams[$team] = (($sumCount+1-$count[$team])/($sumCount+1)/4)*25;
         }
           
         $tempTeam = array();

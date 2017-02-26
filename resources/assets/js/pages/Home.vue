@@ -1,12 +1,11 @@
-@extends('layouts.app')
-@section('content')
+<template >
+    <main-layout>
     <div id="appHome" class="container-fluid">
         <div class="row">
              <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <img src="img/logo.svg" alt=" " class="img-responsive" />
 
-                <div class="center-block fb-login">  
-                <a href ="{{ route('facebook-login') }}">
+                <div class="center-block fb-login">   
                 <div class="fb-btn">
                     <div class="fb-btn-shadow"></div>
                     <div class="fb-btn-background"></div>
@@ -19,12 +18,21 @@
                             </div>
                         </div>
                     </div>
-               
                 </div>
-                </a>
                 </div>
                
               </div>              
         </div>
     </div>
-@endsection
+    </main-layout>
+</template>
+
+
+<script>
+  import MainLayout from '../layouts/Main.vue'
+  export default {
+    components: {
+      MainLayout
+    }
+  }
+</script>
