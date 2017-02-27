@@ -42,13 +42,14 @@ $home-bg : #FFF174;
 //colors
 $white: #fff;
 $black: black;
+$gray :#F1F1F2;
 $team_red :#EF4036;
 $team_blue : #69C8CC;
 $team_green: #C9DB50;
 $team_orange : #F7901D;
 $team_yellow : #FFD429;
 
-$register_bg : #F1F1F2;
+$register_bg : $gray;
 
 //urls
 $url_facebooklogin_back: url(../../../public/img/facebooklogin_back.svg);
@@ -60,3 +61,9 @@ $url_Re: url(../../../public/img/Re.svg);
 $url_bg_line: url(../../../public/img/bg_line.svg);
 $url_name_back: url(../../../public/img/tag_name_back.svg);
 $url_name: url(../../../public/img/tag_name.svg);
+$url_dot_timeline: url(../../../public/img/dot_timeline.svg);
+$url_dot: url(../../../public/img/dot.svg);
+$url_location_tag: url(../../../public/img/location_tag.svg);
+
+//fonts
+$font_kanit: Kanit;

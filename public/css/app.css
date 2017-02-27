@@ -3332,7 +3332,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.6;
-  color: #555555;
+  color: #F1F1F2;
 }
 
 .form-control {
@@ -3342,7 +3342,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.6;
-  color: #555555;
+  color: #F1F1F2;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccd0d2;
@@ -4943,7 +4943,7 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #F1F1F2;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccd0d2;
@@ -5118,7 +5118,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #F1F1F2;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -8334,6 +8334,13 @@ body {
   background-color: #FFF174;
 }
 
+#timeline {
+  padding-top: 5em;
+  min-height: 100%;
+  height: 100%;
+  background-color: #F1F1F2;
+}
+
 .textCenter {
   text-align: center;
 }
@@ -8628,4 +8635,144 @@ body {
 
 .team .team-yellow {
   background-color: #FFD429;
+}
+
+.timeline {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+}
+
+/*timeline-times*/
+
+.timeline-times {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.timeline-times-each {
+  position: relative;
+  margin: -0.4em 0em;
+  padding-right: 3em;
+  line-height: 6.7em;
+  vertical-align: center;
+}
+
+.timeline-times-each-label {
+  color: black;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 1.9em;
+}
+
+/*timeline-mainline*/
+
+.timeline-mainline {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin: 0;
+  padding: 2em 0em;
+}
+
+.timeline-mainline-each {
+  display: block;
+  position: relative;
+}
+
+.timeline-mainline-each-node {
+  position: relative;
+  margin: -0.15em 0em;
+  width: 2.4em;
+  height: 2.4em;
+  background-image: url(/fonts/dot_timeline.svg?c088c23ca5c6fa2424d69013eb36e849);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.timeline-mainline-each-line {
+  position: relative;
+  display: block;
+  left: 50%;
+  margin-left: -0.065em;
+  width: 0.14em;
+  height: 4.5em;
+  background-color: black;
+}
+
+.timeline-description {
+  position: absolute;
+  top: 1em;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  left: 1em;
+  color: black;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 1.9em;
+}
+
+/*timeline-events*/
+
+.timeline-events {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  /* ต้อง set ให้ ความกว้างของอันนี้ = ความกว้างมากที่สุดของ กล่องข้อความสีเหลือง ไม่งั้นจะไม่สามารถ set ให้ทั้ง .timeline อยู่ตรงกลางหน้าได้*/
+  width: 20em;
+}
+
+.timeline-events-each {
+  position: relative;
+  height: 6.6em;
+  padding-left: 4em;
+}
+
+.timeline-events-each-label {
+  position: absolute;
+  top: -2.1em;
+  height: 100%;
+}
+
+.timeline-events-each-label-frame {
+  position: absolute;
+  bottom: 0;
+  /*แก้ตรงนี้ให้ภาพมันขนาดพอดีครับ*/
+  zoom: 0.75;
+}
+
+.timeline-center-line {
+  position: relative;
+  display: block;
+  left: 50%;
+  margin-left: -0.065em;
+  height: 35em;
+  border-left: 0.2em dashed black;
+}
+
+.timeline-center-dot {
+  position: relative;
+  margin: -0.15em 0em;
+  width: 2.4em;
+  height: 2.4em;
+  left: 6.40em;
+  background-image: url(/fonts/dot.svg?904821125697fc602fd1ed9b78a87277);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.location .map {
+  background-image: url(/fonts/location_tag.svg?7c40efe1e9b4e06c350f0f56b5e3fe4d);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.location .map img {
+  height: 23em;
 }
