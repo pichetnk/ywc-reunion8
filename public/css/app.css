@@ -3332,7 +3332,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.6;
-  color: #F1F1F2;
+  color: #555555;
 }
 
 .form-control {
@@ -3342,7 +3342,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.6;
-  color: #F1F1F2;
+  color: #555555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccd0d2;
@@ -4943,7 +4943,7 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #F1F1F2;
+  color: #555555;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccd0d2;
@@ -5118,7 +5118,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #F1F1F2;
+  color: #555555;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
