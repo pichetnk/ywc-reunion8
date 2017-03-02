@@ -3,7 +3,7 @@
 <div class="container" id="shop">
        <div class="row">
             <div class="col-lg-6 col-log-offset-3">
-
+                    
             </div>
        </div>
        <div class="row">

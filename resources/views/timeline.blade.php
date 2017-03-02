@@ -4,11 +4,19 @@
 
 
 <div class="row" id="timeline">
-        <div class="col-lg-5">
+        <div class="col-lg-4 col-lg-offset-1">
+         <img src="/img/MAP-E88-04.jpg" class="img-responsive">
+         
             <div class="location">
-
+                <span class="textover">
+                            Location
+                 </span>
                 <div class="map">
-                        
+                      <p>
+                      E88 Bangkok <br>
+                      E88 Building 2Fl., Sukhumvit 69-71 <br>
+                     
+                      </p>
                 </div>
             </div>
         </div>
@@ -44,7 +52,7 @@
                         <div class="timeline-mainline-each-line"></div>
                     </div>
                     <div class="timeline-mainline-each">
-                        <div class="timeline-mainline-each-node"></div>
+                        <div class="timeline-mainline-eac-node"></div>
                         <div class="timeline-mainline-each-line"></div>
                     </div>
                     <div class="timeline-mainline-each">

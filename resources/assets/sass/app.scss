@@ -420,13 +420,23 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 
 
 .location {
-
+	.textover {
+			font-size: 1.6em;	
+		}
 	.map {
 	    background-image: $url_location_tag;
     	background-position: center;
     	background-repeat: no-repeat;
     	background-size: contain;
 		transform: rotate(-6deg);
+
+		
+		p {
+			text-align: center;
+			font-size: 1.4em;	
+			padding: 1em;
+			margin-top: 2em;
+		}
 		img {
 			height: 23em;
 		}

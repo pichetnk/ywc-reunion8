@@ -8764,6 +8764,10 @@ body {
   background-size: contain;
 }
 
+.location .textover {
+  font-size: 1.6em;
+}
+
 .location .map {
   background-image: url(/fonts/location_tag.svg?7c40efe1e9b4e06c350f0f56b5e3fe4d);
   background-position: center;
@@ -8771,6 +8775,13 @@ body {
   background-size: contain;
   -webkit-transform: rotate(-6deg);
           transform: rotate(-6deg);
+}
+
+.location .map p {
+  text-align: center;
+  font-size: 1.4em;
+  padding: 1em;
+  margin-top: 2em;
 }
 
 .location .map img {
