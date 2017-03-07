@@ -11209,8 +11209,9 @@ $.validator.setDefaults({
   success: "valid"
 });
 
+var registerForm = $('#registerForm');
 $("#register").ready(function () {
-  var registerForm = $('#registerForm');
+
   registerForm.validate({
     rules: {
       nickname: {
@@ -11233,9 +11234,7 @@ $("#register").ready(function () {
     }
   });
 
-  registerForm.submit(function () {
-    console.log("asdasdasdasdasdasda");
-
+  $("#btnRandomTeam").on("click", function () {
     if (registerForm.valid()) {
       axios.post('api/register', $(this).serialize()).then(function (res) {
         var data = res.data;

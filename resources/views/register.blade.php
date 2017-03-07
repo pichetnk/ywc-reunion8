@@ -56,8 +56,7 @@
                                    
                                     <div class="random-team-label" > 
                                         <div class="random-team-content" >
-                                            <a id="btnRandomTeam" href="#" 
-                                             onclick="submitFormRegister();"> สุ่มทีม </a> </div>
+                                            <a id="btnRandomTeam" href="#" > สุ่มทีม </a> </div>
                                     </div>
                              </div>   
                              

@@ -8441,6 +8441,11 @@ optgroup {
   text-transform: uppercase;
 }
 
+.random-team .random-team-label .random-team-content a {
+  color: black;
+  text-decoration: none;
+}
+
 .random-team .random-team-bg {
   top: 0;
   left: 0;
