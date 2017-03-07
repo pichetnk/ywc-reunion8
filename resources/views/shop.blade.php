@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<div class="container" id="shop">
+<div class="container-fluid " id="shop">
        <div class="row">
-            <div class="col-lg-6 col-log-offset-3">
+            <div class="col-lg-6 col-lg-offset-3">
                     
             </div>
        </div>
        <div class="row">
-            <div class="col-lg-6 col-log-offset-3">
+            <div class="col-lg-6 col-lg-offset-3">
 
                 <form class="form-horizontal">
                     <div class="form-group">

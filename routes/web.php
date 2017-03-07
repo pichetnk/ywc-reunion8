@@ -26,13 +26,16 @@ Route::get('/', function () {
 Route::get('/timeline', function () {
     return view('timeline');
 })->name('timeline');
-
+/*
 Route::get('/team', function () {
     return view('team');
 })->name('team');
+*/
 Route::get('/register', function () {
     return view('register');    
 })->name('register');
+
+Route::get('/team',['uses' => 'TeamController@show'])->name('team');
 
 Route::get('/profile',['uses' => 'TeamController@profile'])->name('profile');
 Route::get('/shop',['uses' => 'ShopController@shop'])->name('shop');

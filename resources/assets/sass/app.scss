@@ -5,10 +5,28 @@
 // Variables
 @import "variables";
 
+@import "mixins";
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-html,body { height: 100%; margin: 0px; padding: 0px; }
+//@import 'fontface';
+
+@include font-face(DBHelvethaicaXMed ,"fonts/DB-Helvethaica-X-Med", null, null, ttf);
+@include font-face(DBHelvethaicaXBd ,"fonts/DB-Helvethaica-X-Bd", null, null, ttf);
+
+html,body { height: 100%; margin: 0px; padding: 0px;
+ font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+ font-size: 1em;
+}
+input[type='text']  { 
+	font-size: 1.4em; 
+	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+}
+optgroup { 
+	font-size: 1.4em; 
+	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+}
 #app {
     height:100vh;
 }
@@ -24,6 +42,13 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
     height: 100%;
     background-color: $color_gray;
 }
+#shop {
+	padding-top: 5em;
+	min-height: 100%;
+    height: 100%;
+    background-color: $color_gray;
+}
+
 .textCenter{
 	text-align: center;
 }
@@ -32,13 +57,84 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
    left: 50%;
    position: relative;
    transform: translateX(-50%);
-
+   
    img {
        max-width: 90px;
    }
 }
 .navbar-ywc {
-    border-image: $url_navborder;
+	border: 0px;
+	margin-bottom: 0px;
+ 	a {
+   	   font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+   	   font-size: 1.8em;
+     } 
+}
+.navbar_boder {
+	background-image: $url_nav_bar;
+	background-size: contain;
+	background-position: center;
+/*	background-repeat: no-repeat;*/
+    background-position: left 1em top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.registerHeader { 
+   	 font-size: 2em;
+	 text-align: center;
+}
+.register  {
+  	 font-size: 1.7em;
+}
+.random-team {
+	display: inline-block;
+	position: relative;
+	font-size: 1em;
+    position: relative;
+	
+	&:hover {
+        font-size: 1.1em;
+		cursor:pointer
+    }
+
+
+	 .random-team-label {
+		position: relative;
+	 	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+	    padding: 2.0em;
+		.random-team-content {
+			font-size: 1.2em;
+			font-weight: normal;
+			text-transform: uppercase;
+
+		 }
+	 }
+	.random-team-bg{
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;		 
+		position: absolute;
+		background-image: $url_random;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.random-team-border{
+		position: absolute;
+		top: 0.2em;
+		left: 0.2em;
+		width: 100%;
+		height: 100%;
+		background-image: $url_random_border;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;	
+
+	}
 }
 
 .fb-login {
@@ -118,8 +214,8 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 .member {
     position: relative;
     display: inline-table;
-    padding-left: 3em;
-    padding-top: 2em;
+   /* padding-left: 3em;
+    padding-top: 2em;*/
 }
 .pic-frame {
 	display: inline-block;
@@ -190,7 +286,7 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 .main-btn-tilt {
 	display: inline-block;
 	position: relative;
-	font-size: 13.5px;
+	font-size: 1em;
 	.main-btn-tilt-border {
 		position: absolute;
 		top: 0;
@@ -228,7 +324,7 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 		position: relative;
 		padding: 2.3em;
 		.main-btn-tilt-content {
-			font-size: 1.9em;
+			font-size: 1.6em;
 			font-weight: bold;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: rotate(-2.5deg);
@@ -244,6 +340,7 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 
 .team {
     min-height: 100px;
+	
     .team-bg-img{
         background-image: $url_bg_line;
         position: fixed;
@@ -286,6 +383,10 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
     .team-yellow {
         background-color: $team_yellow ;
     }
+
+	.buttomTeam {
+		height: 3em;
+	}
 
 }
 
@@ -361,8 +462,8 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
     top: 1em;
     transform: rotate(-6deg);
     left: 1em;
-	 color: $black;
-    font-family: Kanit;
+	color: $black;
+    
     font-weight: 400;
     font-size: 1.9em;
 }
@@ -411,7 +512,7 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
     margin: -0.15em 0em;
     width: 2.4em;
     height: 2.4em;
-	left: 6.40em;
+	left: 5.5em;
     background-image: $url_dot;
     background-position: center;
     background-repeat: no-repeat;
@@ -420,20 +521,25 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 
 
 .location {
-	.textover {
-			font-size: 1.6em;	
+	    position: relative;
+	.location-label {
+		position: absolute;
+		top: -1.4em;
+		left: 1em;
+		transform: rotate(-6deg);	
+		.textover {
+			font-size: 3.5em;	
 		}
+	}
 	.map {
 	    background-image: $url_location_tag;
     	background-position: center;
     	background-repeat: no-repeat;
     	background-size: contain;
-		transform: rotate(-6deg);
-
-		
+		transform: rotate(-6deg);		
 		p {
 			text-align: center;
-			font-size: 1.4em;	
+			font-size: 2em;	
 			padding: 1em;
 			margin-top: 2em;
 		}

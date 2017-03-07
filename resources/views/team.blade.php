@@ -15,21 +15,26 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                           
 
-                      <div class="member"> 
+                     
+                      
+                     @foreach ($teamRed as $user)
+                          <div class="member"> 
                            <div class="pic-frame">
                                <div class="pic-frame-border-out"></div>
-                               <div class="pic-frame-icon"></div>
-                               
-                              <img src="/img/pic-frame-tmp.png" class="pic-frame-pic">
+                               <div class="pic-frame-icon"> </div>                             
+                             
+                               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                              
                            <div class="pic-frame-border-in"></div>
                          </div>
                       </div>
-                      
+                     @endforeach
+
                              
                       
                 </div>   
             </div>
-           
+            <div class="row buttomTeam"></div>
          </div>
 
           <div class="row team-blue">  
@@ -40,10 +45,24 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                      
+
+                       @foreach ($teamBlue as $user)
+                          <div class="member"> 
+                           <div class="pic-frame">
+                               <div class="pic-frame-border-out"></div>
+                               <div class="pic-frame-icon"></div>                             
+                             
+                               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                              
+                           <div class="pic-frame-border-in"></div>
+                         </div>
+                      </div>
+                     @endforeach
 
                 </div>   
+            
             </div>
+            <div class="row buttomTeam"></div>
          </div>
 
           <div class="row team-green">  
@@ -54,10 +73,22 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                      
+                     @foreach ($teamGreen as $user)
+                          <div class="member"> 
+                           <div class="pic-frame">
+                               <div class="pic-frame-border-out"></div>
+                               <div class="pic-frame-icon"></div>                             
+                             
+                               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                              
+                           <div class="pic-frame-border-in"></div>
+                         </div>
+                      </div>
+                     @endforeach
 
                 </div>   
             </div>
+            <div class="row buttomTeam"></div>
          </div>
 
 
@@ -70,9 +101,21 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                       
-
+                        @foreach ($teamOrange as $user)
+                          <div class="member"> 
+                           <div class="pic-frame">
+                               <div class="pic-frame-border-out"></div>
+                               <div class="pic-frame-icon"></div>                             
+                             
+                               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                              
+                           <div class="pic-frame-border-in"></div>
+                         </div>
+                      </div>
+                     @endforeach
                 </div>   
             </div>
+            <div class="row buttomTeam"></div>
          </div>
 
           <div class="row team-yellow">  
@@ -83,10 +126,22 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                      
+                      @foreach ($teamYellow as $user)
+                          <div class="member"> 
+                           <div class="pic-frame">
+                               <div class="pic-frame-border-out"></div>
+                               <div class="pic-frame-icon"></div>                           
+                             
+                               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                              
+                           <div class="pic-frame-border-in"></div>
+                         </div>
+                      </div>
+                     @endforeach
 
                 </div>   
             </div>
+            <div class="row buttomTeam"></div>
          </div>
 
          </div>

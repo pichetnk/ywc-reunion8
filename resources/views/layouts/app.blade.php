@@ -23,6 +23,11 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top navbar-ywc">
+         <div class="navbar-bg">
+             <div class="navbar_boder"></div>
+             
+         </div>
+        
             <div class="container">
                 <div class="navbar-header">
 
@@ -33,8 +38,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-                    <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=" "/></a>
+                    @if(Route::current()->getName() != 'home')
+                        <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=" "/></a>
+                    @endif
+                    
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -46,14 +53,13 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                              <li><a href="{{ route('home') }}">home</a></li>
-                            <li><a href="{{ route('timeline') }}">timeline</a>
-                            <li><a href="{{ route('team') }}">Team</a>
-                             <li><a href="{{ route('register') }}">Register</a>
+                            <li><a href="{{ route('timeline') }}">timeline</a>  
                             
                         
                     </ul>
                 </div>
             </div>
+           
         </nav>
 
         @yield('content')

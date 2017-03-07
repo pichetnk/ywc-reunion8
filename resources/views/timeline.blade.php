@@ -8,9 +8,7 @@
          <img src="/img/MAP-E88-04.jpg" class="img-responsive">
          
             <div class="location">
-                <span class="textover">
-                            Location
-                 </span>
+                
                 <div class="map">
                       <p>
                       E88 Bangkok <br>
@@ -18,6 +16,11 @@
                      
                       </p>
                 </div>
+                <div class="location-label">
+                <span class="textover">
+                            Location
+                 </span>
+                 </div>
             </div>
         </div>
         <div class="col-lg-2">
@@ -52,7 +55,7 @@
                         <div class="timeline-mainline-each-line"></div>
                     </div>
                     <div class="timeline-mainline-each">
-                        <div class="timeline-mainline-eac-node"></div>
+                        <div class="timeline-mainline-each-node"></div>
                         <div class="timeline-mainline-each-line"></div>
                     </div>
                     <div class="timeline-mainline-each">

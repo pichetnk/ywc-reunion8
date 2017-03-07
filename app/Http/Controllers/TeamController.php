@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\UserDetail;
 use App\User;
 use Auth;
@@ -18,6 +19,38 @@ class TeamController extends Controller
         $this->middleware('auth');
     }
 
+
+    public function show(){
+         
+        $teamRed= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'r')
+                                  ->orderBy('generation', 'desc')->get();
+
+        $teamBlue= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'b')
+                                  ->orderBy('generation', 'desc')->get();
+
+        $teamGreen= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'g')
+                                  ->orderBy('generation', 'desc')->get();
+
+        $teamOrange= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'o')
+                                  ->orderBy('generation', 'desc')->get();
+
+        $teamYellow= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+                                  ->where('team', 'y')
+                                  ->orderBy('generation', 'desc')->get();
+                            
+ 
+       return view('team' , [
+                'teamRed' => $teamRed,
+                'teamBlue' => $teamBlue,
+                'teamGreen' => $teamGreen,
+                'teamOrange' => $teamOrange,
+                'teamYellow' => $teamYellow
+            ]);      
+    }
     /**
      * Show the application dashboard.
      *

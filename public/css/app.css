@@ -8317,11 +8317,33 @@ button.close {
   }
 }
 
+@font-face {
+  font-family: "DBHelvethaicaXMed";
+  src: url(/fonts/DB-Helvethaica-X-Med.ttf?f4c918cf191c86c7878fe390377ed3bc) format("truetype");
+}
+
+@font-face {
+  font-family: "DBHelvethaicaXBd";
+  src: url(/fonts/DB-Helvethaica-X-Bd.ttf?0134ad1364f9d7fdfb8a6b47d1b82af2) format("truetype");
+}
+
 html,
 body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+  font-size: 1em;
+}
+
+input[type='text'] {
+  font-size: 1.4em;
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+}
+
+optgroup {
+  font-size: 1.4em;
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
 }
 
 #app {
@@ -8335,6 +8357,13 @@ body {
 }
 
 #timeline {
+  padding-top: 5em;
+  min-height: 100%;
+  height: 100%;
+  background-color: #F1F1F2;
+}
+
+#shop {
   padding-top: 5em;
   min-height: 100%;
   height: 100%;
@@ -8357,8 +8386,83 @@ body {
 }
 
 .navbar-ywc {
-  -o-border-image: url(/fonts/bar.svg?3a78214691f199156d38a5d64ef35ba8);
-     border-image: url(/fonts/bar.svg?3a78214691f199156d38a5d64ef35ba8);
+  border: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-ywc a {
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+  font-size: 1.8em;
+}
+
+.navbar_boder {
+  background-image: url(/fonts/bar.svg?3a78214691f199156d38a5d64ef35ba8);
+  background-size: contain;
+  background-position: center;
+  /*	background-repeat: no-repeat;*/
+  background-position: left 1em top;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.registerHeader {
+  font-size: 2em;
+  text-align: center;
+}
+
+.register {
+  font-size: 1.7em;
+}
+
+.random-team {
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  position: relative;
+}
+
+.random-team:hover {
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.random-team .random-team-label {
+  position: relative;
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+  padding: 2.0em;
+}
+
+.random-team .random-team-label .random-team-content {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.random-team .random-team-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(/fonts/button_random.svg?fc0ff52f58dd9282a2df55660e255905);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.random-team .random-team-border {
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  width: 100%;
+  height: 100%;
+  background-image: url(/fonts/button_random_border.svg?713a66eb398aec0801663f0705c7a5ee);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .fb-login {
@@ -8444,8 +8548,8 @@ body {
 .member {
   position: relative;
   display: inline-table;
-  padding-left: 3em;
-  padding-top: 2em;
+  /* padding-left: 3em;
+    padding-top: 2em;*/
 }
 
 .pic-frame {
@@ -8529,7 +8633,7 @@ body {
 .main-btn-tilt {
   display: inline-block;
   position: relative;
-  font-size: 13.5px;
+  font-size: 1em;
 }
 
 .main-btn-tilt .main-btn-tilt-border {
@@ -8574,7 +8678,7 @@ body {
 }
 
 .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
-  font-size: 1.9em;
+  font-size: 1.6em;
   font-weight: bold;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
@@ -8635,6 +8739,10 @@ body {
 
 .team .team-yellow {
   background-color: #FFD429;
+}
+
+.team .buttomTeam {
+  height: 3em;
 }
 
 .timeline {
@@ -8709,7 +8817,6 @@ body {
           transform: rotate(-6deg);
   left: 1em;
   color: black;
-  font-family: Kanit;
   font-weight: 400;
   font-size: 1.9em;
 }
@@ -8757,15 +8864,27 @@ body {
   margin: -0.15em 0em;
   width: 2.4em;
   height: 2.4em;
-  left: 6.40em;
+  left: 5.5em;
   background-image: url(/fonts/dot.svg?904821125697fc602fd1ed9b78a87277);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.location .textover {
-  font-size: 1.6em;
+.location {
+  position: relative;
+}
+
+.location .location-label {
+  position: absolute;
+  top: -1.4em;
+  left: 1em;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.location .location-label .textover {
+  font-size: 3.5em;
 }
 
 .location .map {
@@ -8779,7 +8898,7 @@ body {
 
 .location .map p {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 2em;
   padding: 1em;
   margin-top: 2em;
 }
