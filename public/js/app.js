@@ -11236,13 +11236,11 @@ $("#register").ready(function () {
 
   $("#btnRandomTeam").on("click", function () {
     if (registerForm.valid()) {
-      axios.post('api/register', $(this).serialize()).then(function (res) {
+      axios.post('api/register', $("#registerForm").serialize()).then(function (res) {
         var data = res.data;
         if (data.error_code == '00') {
-
           console.log('valid');
         }if (data.error_code == '01') {
-
           console.log('user register');
         } else {
           console.log('Not found error');

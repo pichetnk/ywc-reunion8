@@ -8347,11 +8347,10 @@ optgroup {
 }
 
 #app {
-  height: 100vh;
+  height: 100%;
 }
 
 #appHome {
-  min-height: 100%;
   height: 100%;
   background-color: #FFF174;
 }
@@ -8399,7 +8398,7 @@ optgroup {
   background-image: url(/fonts/bar.svg?3a78214691f199156d38a5d64ef35ba8);
   background-size: contain;
   background-position: center;
-  /*	background-repeat: no-repeat;*/
+  background-repeat: repeat-x;
   background-position: left 1em top;
   width: 100%;
   height: 100%;
@@ -8408,13 +8407,15 @@ optgroup {
   left: 0;
 }
 
+@media (max-width: 767px) {
+  .navbar_boder {
+    top: 2em;
+  }
+}
+
 .registerHeader {
   font-size: 2em;
   text-align: center;
-}
-
-.register {
-  font-size: 1.7em;
 }
 
 .random-team {
@@ -8564,25 +8565,25 @@ optgroup {
 
 @media (max-width: 767px) {
   .pic-frame {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .pic-frame {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .pic-frame {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 
 @media (min-width: 1200px) {
   .pic-frame {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 
@@ -8630,9 +8631,19 @@ optgroup {
 }
 
 .register {
-  height: 100%;
   background-color: #F1F1F2;
   padding-top: 5em;
+  font-size: 1.7em;
+}
+
+@media (min-width: 992px) {
+  .register {
+    height: 100%;
+  }
+}
+
+.profile-name {
+  text-align: center;
 }
 
 .main-btn-tilt {
@@ -8677,6 +8688,13 @@ optgroup {
   background-position: center;
 }
 
+@media (max-width: 767px) {
+  .main-btn-tilt .main-btn-tilt-shadow {
+    top: 0.2 0.5em;
+    left: .4em;
+  }
+}
+
 .main-btn-tilt .main-btn-tilt-label {
   position: relative;
   padding: 2.3em;
@@ -8687,6 +8705,12 @@ optgroup {
   font-weight: bold;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
+}
+
+@media (max-width: 767px) {
+  .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
+    font-size: 1em;
+  }
 }
 
 .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content .main-btn-tilt-text {

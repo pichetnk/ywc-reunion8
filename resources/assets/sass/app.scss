@@ -15,7 +15,7 @@
 @include font-face(DBHelvethaicaXMed ,"fonts/DB-Helvethaica-X-Med", null, null, ttf);
 @include font-face(DBHelvethaicaXBd ,"fonts/DB-Helvethaica-X-Bd", null, null, ttf);
 
-html,body { height: 100%; margin: 0px; padding: 0px;
+html,body { height: 100%; margin: 0px; padding: 0px; 
  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
  font-size: 1em;
 }
@@ -27,11 +27,13 @@ optgroup {
 	font-size: 1.4em; 
 	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
 }
+
 #app {
-    height:100vh;
+	height:100%;
+  
 }
 #appHome {
-    min-height: 100%;
+   
     height: 100%;
     background-color:  $home-bg;
 }
@@ -74,21 +76,23 @@ optgroup {
 	background-image: $url_nav_bar;
 	background-size: contain;
 	background-position: center;
-/*	background-repeat: no-repeat;*/
+ 	background-repeat: repeat-x;
     background-position: left 1em top;
     width: 100%;
     height: 100%;
     position: absolute;
+
     top: 0;
     left: 0;
+	@media (max-width: $screen-xs-max) { 
+        top : 2em;
+    }
 }
 .registerHeader { 
    	 font-size: 2em;
 	 text-align: center;
 }
-.register  {
-  	 font-size: 1.7em;
-}
+
 .random-team {
 	display: inline-block;
 	position: relative;
@@ -224,16 +228,16 @@ optgroup {
 	display: inline-block;
 	position: relative;
     @media (max-width: $screen-xs-max) { 
-        font-size: 10px;
+        font-size: 15px;
     }
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
-        font-size: 10px;
+        font-size: 15px;
      }
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
-        font-size: 15px;
+        font-size: 25px;
      }
     @media (min-width: $screen-lg-min) { 
-        font-size: 15px;
+        font-size: 25px;
     }
 
 
@@ -280,11 +284,18 @@ optgroup {
 }
 
 .register{
-	height: 100%;
+ 
 	background-color: $register_bg;
 	padding-top: 5em;
+	font-size: 1.7em;
+	@media (min-width: $screen-md-min)  { 
+		height: 100%;
+	}
 }
 
+.profile-name {
+	text-align: center;
+}
 
 .main-btn-tilt {
 	display: inline-block;
@@ -316,6 +327,10 @@ optgroup {
 		position: absolute;
 		top: .5em;
 		left: .8em;
+		@media (max-width: $screen-xs-max) { 
+			top: .2.5em;
+			left: .4em;
+		}
 		width: 100%;
 		height: 100%;
 		background-image: $url_name_back;
@@ -328,6 +343,9 @@ optgroup {
 		padding: 2.3em;
 		.main-btn-tilt-content {
 			font-size: 1.6em;
+			@media (max-width: $screen-xs-max) { 
+        			font-size: 1em;
+    		}
 			font-weight: bold;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: rotate(-2.5deg);

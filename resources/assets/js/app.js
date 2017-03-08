@@ -83,14 +83,12 @@ $("#register").ready(function () {
     $("#btnRandomTeam").on("click",function()
     {     
         if(registerForm.valid()){
-          axios.post('api/register',$(this).serialize())
+           axios.post('api/register',$("#registerForm").serialize())
               .then(function (res) {
                 let data = res.data;
                 if(data.error_code=='00'){
-
                     console.log('valid');
                 }if(data.error_code=='01'){
-
                     console.log('user register');
                 }else {
                    console.log('Not found error');
