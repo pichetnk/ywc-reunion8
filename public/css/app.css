@@ -8928,7 +8928,7 @@ optgroup {
 
 .location .location-label {
   position: absolute;
-  top: -1.4em;
+  top: -2em;
   left: 1em;
   -webkit-transform: rotate(-6deg);
           transform: rotate(-6deg);
@@ -8949,9 +8949,9 @@ optgroup {
 
 .location .map p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 1em;
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 
 .location .map img {
