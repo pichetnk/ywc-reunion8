@@ -52,8 +52,8 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                             <li><a href="{{ route('home') }}">home</a></li>
-                            <li><a href="{{ route('timeline') }}">timeline</a>  
+                       <li><a href="{{ route('home') }}" class="menuItem">HOME</a></li>
+                       <li><a href="{{ route('timeline') }}" class="menuItem" >TIMELINE</a>  
                             
                         
                     </ul>

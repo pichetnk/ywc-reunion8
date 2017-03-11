@@ -11209,9 +11209,8 @@ $.validator.setDefaults({
   success: "valid"
 });
 
-var registerForm = $('#registerForm');
 $("#register").ready(function () {
-
+  var registerForm = $('#registerForm');
   registerForm.validate({
     rules: {
       nickname: {
@@ -11260,6 +11259,11 @@ $("#register").ready(function () {
     }
     return false;
   });
+});
+
+$("#shop").ready(function () {
+
+  $('#btnSubmitShop').on('click', function () {});
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 

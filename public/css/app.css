@@ -8334,6 +8334,7 @@ body {
   padding: 0px;
   font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
   font-size: 1em;
+  color: #404041;
 }
 
 input[type='text'] {
@@ -8353,6 +8354,7 @@ optgroup {
 #appHome {
   height: 100%;
   background-color: #FFF174;
+  padding-top: 3em;
 }
 
 #timeline {
@@ -8373,6 +8375,16 @@ optgroup {
   text-align: center;
 }
 
+.row-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-team {
+  margin-top: 10%;
+}
+
 .navbar-header {
   left: 50%;
   position: relative;
@@ -8382,16 +8394,6 @@ optgroup {
 
 .navbar-header img {
   max-width: 90px;
-}
-
-.navbar-ywc {
-  border: 0px;
-  margin-bottom: 0px;
-}
-
-.navbar-ywc a {
-  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-  font-size: 1.8em;
 }
 
 .navbar_boder {
@@ -8413,9 +8415,24 @@ optgroup {
   }
 }
 
+.navbar-ywc {
+  border: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-ywc .menuItem {
+  color: #404041;
+}
+
+.navbar-ywc a {
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+  font-size: 1.8em;
+}
+
 .registerHeader {
   font-size: 2em;
   text-align: center;
+  color: #404041;
 }
 
 .random-team {
@@ -8644,6 +8661,10 @@ optgroup {
 
 .profile-name {
   text-align: center;
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  font-size: 2em;
+  color: #262223;
 }
 
 .main-btn-tilt {
@@ -8902,6 +8923,7 @@ optgroup {
 
 .location {
   position: relative;
+  color: #404041;
 }
 
 .location .location-label {
