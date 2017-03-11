@@ -8819,7 +8819,7 @@ optgroup {
 
 .timeline-times-each-label {
   color: black;
-  font-family: Kanit;
+  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
   font-weight: 400;
   font-size: 1.9em;
 }
