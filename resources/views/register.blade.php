@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                             <input type="hidden"  id="facebook_id" name="facebook_id" value="{{ Auth::user()->facebook_id }}">                         
-                            
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                              <div class="random-team">
                                      <div class="random-team-border"></div>
                                     <div class="random-team-bg"></div>
