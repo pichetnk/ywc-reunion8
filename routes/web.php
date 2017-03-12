@@ -19,6 +19,7 @@ Route::get('facebook-login', ['uses' => 'AuthController@redirectToFacebook'])->n
 Route::get('fb-callback', ['uses' => 'AuthController@handleFacebookCallback']);
  
 //Auth::routes();
+//Passport::routes();
 Route::get('login',  function () {
     return redirect()->route('home');
 })->name('login');
@@ -43,4 +44,4 @@ Route::get('/team',['uses' => 'TeamController@show'])->name('team');
 
 Route::get('/profile',['uses' => 'TeamController@profile'])->name('profile');
 Route::get('/shop',['uses' => 'ShopController@shop'])->name('shop');
-
+Route::post('/api/register',  'ApiController@register' );

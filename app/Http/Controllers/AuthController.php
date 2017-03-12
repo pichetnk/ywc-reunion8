@@ -45,6 +45,7 @@ class AuthController extends Controller
         
         Auth::login($authUser, true);
         Auth::guard('api')->user();
+        
 
         $userDetail= UserDetail::where('facebook_id', $user->id)->first();
         if($userDetail) {

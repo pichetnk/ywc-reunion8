@@ -21,6 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::get('getTeam',  'ApiController@getTeamAll' );
 //Route::get('getTeam/{team}',  'ApiController@getTeam' );
-Route::middleware('auth:web')->post('register',  'ApiController@register' );
+//Route::post('register',  'ApiController@register' );
 //Route::get('user/{facebookId}',  'ApiController@getuser' );
-Route::middleware('auth:web')->post('order',  'ApiController@createOrder' );
+//Route::post('order',  'ApiController@createOrder' );
