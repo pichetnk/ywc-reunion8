@@ -1,9 +1,9 @@
 .timeline {
     display: inline-block;
     position: relative;
-    font-size: 16px;
+    font-size: 32px;
+    white-space: nowrap;
 }
-
 
 /*timeline-times*/
 
@@ -95,4 +95,6 @@
     zoom: 0.75;
 }
 
-.timeline-events-each-label .img {}
+.timeline-events-each-label img {
+    width: 12em;
+}
