@@ -21,7 +21,7 @@ class CreateUserDetailsTable extends Migration
             $table->string('group',5)->nullable();
             $table->string('generation',5);
             $table->enum('join_event',['going', 'not_go']);
-            $table->foreign('facebook_id')->references('facebook_id')->on('user');
+            $table->foreign('facebook_id')->references('facebook_id')->on('users');
             $table->timestamps();
           
         });
