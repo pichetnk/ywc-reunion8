@@ -83,7 +83,7 @@ $("#register").ready(function () {
     $("#btnRandomTeam").on("click",function()
     {     
         if(registerForm.valid()){
-           axios.post('api/register',$("#registerForm").serialize())
+           axios.post('register',$("#registerForm").serialize())
               .then(function (res) {
                 let data = res.data;
                 if(data.error_code=='00'){
