@@ -19,6 +19,7 @@ html,body { height: 100%; margin: 0px; padding: 0px;
  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
  font-size: 1em;
  color:  $color_text;
+   background-color: $color_gray;
 }
 input[type='text']  { 
 	font-size: 1.4em; 
@@ -433,7 +434,9 @@ optgroup {
 .timeline {
     display: inline-block;
     position: relative;
-    font-size: 16px;
+    font-size: 1em;
+    white-space: nowrap;
+
 }
 
 
@@ -530,6 +533,10 @@ optgroup {
     position: absolute;
     top: -2.1em;
     height: 100%;
+	img {
+       width: 12em;
+    }
+
 }
 
 .timeline-events-each-label-frame {

@@ -23,7 +23,7 @@
                  </div>
             </div>
         </div>
-        <div class="col-lg-2 hidden-xs">
+        <div class="col-lg-2 visible-lg-block">
              <div class="timeline-mainline-each">
                 <div class="timeline-center-dot"></div>
                 <div class="timeline-center-line"></div>
