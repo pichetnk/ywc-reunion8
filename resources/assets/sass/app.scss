@@ -18,6 +18,7 @@
 html,body { height: 100%; margin: 0px; padding: 0px; 
  font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
  font-size: 1em;
+ color:  $color_text;
 }
 input[type='text']  { 
 	font-size: 1.4em; 
@@ -36,6 +37,7 @@ optgroup {
    
     height: 100%;
     background-color:  $home-bg;
+	padding-top: 3em;
 }
 
 #timeline{
@@ -54,24 +56,24 @@ optgroup {
 .textCenter{
 	text-align: center;
 }
-
+.row-profile{
+	display: flex;
+}
+.col-team {
+	margin-top : 10%;
+}
 .navbar-header{
    left: 50%;
    position: relative;
    transform: translateX(-50%);
    
+
    img {
        max-width: 90px;
    }
 }
-.navbar-ywc {
-	border: 0px;
-	margin-bottom: 0px;
- 	a {
-   	   font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-   	   font-size: 1.8em;
-     } 
-}
+
+
 .navbar_boder {
 	background-image: $url_nav_bar;
 	background-size: contain;
@@ -88,9 +90,22 @@ optgroup {
         top : 2em;
     }
 }
+.navbar-ywc {
+	border: 0px;
+	margin-bottom: 0px;
+	.menuItem {
+		color:  $color_text_nav ;
+	} 
+ 	a {
+   	   font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+   	   font-size: 1.8em;
+	  
+     } 
+}
 .registerHeader { 
    	 font-size: 2em;
 	 text-align: center;
+	 color:  $color_text;
 }
 
 .random-team {
@@ -295,6 +310,10 @@ optgroup {
 
 .profile-name {
 	text-align: center;
+	transform: rotate(-2.5deg);
+	font-size: 2em;
+	color: $brown;
+
 }
 
 .main-btn-tilt {
@@ -435,8 +454,9 @@ optgroup {
 }
 
 .timeline-times-each-label {
+	
     color: $black;
-    font-family: Kanit;
+    font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
     font-weight: 400;
     font-size: 1.9em;
 }
@@ -543,9 +563,10 @@ optgroup {
 
 .location {
 	    position: relative;
+		color: $color_text;
 	.location-label {
 		position: absolute;
-		top: -1.4em;
+		top: -2em;
 		left: 1em;
 		transform: rotate(-6deg);	
 		.textover {
@@ -560,9 +581,9 @@ optgroup {
 		transform: rotate(-6deg);		
 		p {
 			text-align: center;
-			font-size: 2em;	
+			font-size: 1.5em;	
 			padding: 1em;
-			margin-top: 2em;
+			margin-top: 2.5em;
 		}
 		img {
 			height: 23em;

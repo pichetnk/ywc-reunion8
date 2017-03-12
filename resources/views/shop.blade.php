@@ -9,7 +9,7 @@
        <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
 
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="formShop">
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">ชื่อ-สกุล</label>
                         <div class="col-sm-10">
@@ -95,7 +95,7 @@
                
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">สั่งชื้อ</button>
+                        <button type="button" class="btn btn-default" id="btnSubmitShop">สั่งชื้อ</button>
                         </div>
                     </div>
                 </form>
