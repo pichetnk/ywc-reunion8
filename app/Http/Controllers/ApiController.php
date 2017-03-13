@@ -99,7 +99,10 @@ class ApiController extends Controller
         $joinEvent = $request->input('join_event');
         
 
-        if(!$facebook_id || !$nickname || !$generation  || !$joinEvent ){
+        if(!$request->has('facebook_id') || 
+           !$request->has('nickname') || 
+           !$request->has('generation') || 
+           !$request->has('join_event')){
               return response()->json([
                     'error' => "Bad Request",
                     'error_code' => "00"
@@ -114,10 +117,12 @@ class ApiController extends Controller
                 ], 200 );
         }
         
+     
+      //  $team = $this->randomTeam();
         $userDetail= UserDetail::create([
             'nikcname'   => $nickname,
             'facebook_id'  => $facebook_id,   
-            'team' => $this->randomTeam(),
+            'team' => $this->randomTeam($generation),
             'generation' => $generation,
             'join_event' => $joinEvent
         ]);       
@@ -188,15 +193,41 @@ class ApiController extends Controller
     }
 
 
-    private function randomTeam(){
+    private function randomTeam($generation){
         $count = array('r'=>0,'b'=>0,'g'=>0,'o'=>0,'y'=>0);
         $teams = array('r'=>5,'b'=>5,'g'=>5,'o'=>5,'y'=>5);
         $myTeam ="";
         $sumCount =0;
+
+        if($generation==0){
+                $countTeamGenetation=DB::table('user_details')
+                                    ->select(DB::raw('team , count(*) as teamCount')) 
+                                    ->where('generation', '=', '0')
+                                    ->groupBy('team') ->get();
+                foreach ($countTeamGenetation as $obj) {
+                    $count[$obj->team]= $obj->teamCount;                 
+                }
+
+                asort($count);
+                $checkEqu =0;
+                $randomArray = array();
+                foreach ($count as $key => $value) {
+                    if($checkEqu == $value || $checkEqu == $value -1){
+                        array_push($randomArray,$key);
+                    }
+                    $checkEqu = $value;
+                }
+                $myTeam = $randomArray[mt_rand(0, count($randomArray) - 1)];
+                return $myTeam;    
+        }
+
+
+
+        $count = array('r'=>0,'b'=>0,'g'=>0,'o'=>0,'y'=>0);
         $countTeamObj=DB::table('user_details')->select(DB::raw('team , count(*) as teamCount')) ->groupBy('team') ->get();
         
         foreach ($countTeamObj as $obj) {
-          //  var_dump($obj);
+         
             $count[$obj->team]= $obj->teamCount;
             $sumCount += $obj->teamCount;
         }
