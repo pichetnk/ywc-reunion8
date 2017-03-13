@@ -1,0 +1,56 @@
+version: '2'
+
+services: 
+  # starts only this one
+  web:
+    build:
+      context: .
+      dockerfile: php-mysql-apache.Dockerfile
+    depends_on:
+      - mysql
+    volumes:
+      - ../:/var/www/html
+    ports:
+      - 8000:80
+      
+  mysql: 
+    image: mysql:5.7
+    environment: 
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=ywc_reunion8
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  # be run at runtime
+  composer:
+    image: composer:latest
+    entrypoint: composer
+    command: install
+    working_dir: /app
+    volumes:
+      - ../:/app
+
+  npm:
+    image: node:latest
+    entrypoint: npm
+    command: install
+    working_dir: /app
+    volumes:
+      - ../:/app
+
+  php:
+    build:
+      context: .
+      dockerfile: php-mysql-apache.Dockerfile
+    entrypoint: php
+    working_dir: /app
+    volumes:
+      - ../:/app
+
+  # helper service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8080:80
+    links:
+      - mysql:db

@@ -1,3 +1,32 @@
+## Quick start
+
+```
+cd docker
+# want to pull and build at once ?
+docker-compose build && docker-compose pull
+
+# install composer dependencies
+docker-compose run --rm composer install
+# set the permission (if can't just sudo)
+chmod 777 -R storage bootstrap/cache
+# install node dependencies
+docker-compose run --rm npm install
+
+(create your own .env; mysql-host=mysql; user=root; password=root)
+# start mysql
+docker-compose up -d mysql
+# migrate the db
+docker-compose run --rm php artisan migrate
+
+# start the web
+docker-compose up -d web
+(go to http://localhost:8000)
+
+# wanna see the phpmyadmin ? 
+docker-compose up -d phpmyadmin
+```
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
