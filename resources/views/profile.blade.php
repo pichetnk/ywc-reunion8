@@ -10,7 +10,7 @@
                         <img src="/img/{{$teamImg}}.svg" class="img-responsive">    
                         <div class="profile-name">
                             
-                            {{$userDetail->nikcname}}
+                            {{$userDetail->nickname}}
                             @if ( $userDetail->generation  == 0)
                                 สมาคม
                             @else

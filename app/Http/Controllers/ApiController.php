@@ -42,22 +42,22 @@ class ApiController extends Controller
     public function getTeamAll()
     {
        
-        $teamRed= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamRed= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'r')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamBlue= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamBlue= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'b')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamGreen= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamGreen= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'g')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamOrange= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamOrange= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'o')
                                   ->orderBy('generation', 'desc')->get();
-        $teamYellow= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamYellow= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'y')
                                   ->orderBy('generation', 'desc')->get();
                             
@@ -83,7 +83,7 @@ class ApiController extends Controller
                 ], 400 );
             }
 
-            $teamMember= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+            $teamMember= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', $team)
                                   ->orderBy('generation', 'desc')->get();
 
@@ -120,7 +120,7 @@ class ApiController extends Controller
      
       //  $team = $this->randomTeam();
         $userDetail= UserDetail::create([
-            'nikcname'   => $nickname,
+            'nickname'   => $nickname,
             'facebook_id'  => $facebook_id,   
             'team' => $this->randomTeam($generation),
             'generation' => $generation,

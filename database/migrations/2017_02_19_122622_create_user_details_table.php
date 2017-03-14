@@ -16,7 +16,7 @@ class CreateUserDetailsTable extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->increments('id');
             $table->string('facebook_id',50);    
-            $table->string('nikcname',50);
+            $table->string('nickname',50);
             $table->string('team',5);
             $table->string('group',5)->nullable();
             $table->string('generation',5);

@@ -92,7 +92,7 @@ $("#register").ready(function () {
                     console.log('user register');
                 }else {
                    console.log('Not found error');
-                   window.location.href = '/profile';                 
+                   window.location.href = '/team';                 
 
                 }
                 console.log(res.data);

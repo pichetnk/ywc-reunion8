@@ -54,6 +54,12 @@ optgroup {
     background-color: $color_gray;
 }
 
+#team {
+	.profile {
+		padding-top:  2em;
+	}
+}
+
 .textCenter{
 	text-align: center;
 }
@@ -239,21 +245,47 @@ optgroup {
     display: inline-table;
    /* padding-left: 3em;
     padding-top: 2em;*/
+	color: $black;
+	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+
+	.labal-name {
+		position: relative;
+		
+		@media (max-width: $screen-xs-max) { 
+        	top: -8.5em;
+			font-size: 1.2em;
+		}
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+			top: -8.5em;
+			font-size: 1.2em;
+		}
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
+			top: -9.1em;
+			font-size: 1.8em;
+		}
+		@media (min-width: $screen-lg-min) { 
+			top: -9.1em;
+			font-size: 1.8em;
+		}
+
+		
+		text-align: center;
+	}
 }
 .pic-frame {
 	display: inline-block;
 	position: relative;
     @media (max-width: $screen-xs-max) { 
-        font-size: 15px;
+        font-size: 12px;
     }
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
-        font-size: 15px;
+        font-size: 12px;
      }
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
-        font-size: 25px;
+        font-size: 20px;
      }
     @media (min-width: $screen-lg-min) { 
-        font-size: 25px;
+        font-size: 20px;
     }
 
 
@@ -382,14 +414,21 @@ optgroup {
 .team {
     min-height: 100px;
 	
-    .team-bg-img{
-        background-image: $url_bg_line;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        opacity: 0.2;
-        margin-top: -5em;
-    }
+	.team-bg{
+		position: relative;
+		overflow: hidden;
+		.team-bg-img{
+			background-image: $url_bg_line;
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			opacity: 0.2;
+			top: 0;
+			left: 0;
+		/* margin-top: -5em;*/
+    	}
+	}
+    
     .team-banner {
         padding-top: 4em;
         padding-bottom: 2em;

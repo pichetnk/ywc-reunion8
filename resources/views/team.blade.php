@@ -1,8 +1,30 @@
 @extends('layouts.app')
 @section('content')
     <div id="team" class="container-fluid">
+        <div class="row profile">
+             <div class="col-lg-4 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                       
+                 @include('profileimage')     
+                </div> 
+                <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-team">
+                        <img src="/img/{{$teamImg}}.svg" class="img-responsive">    
+                        <div class="profile-name">
+                            
+                            {{$userDetail->nickname}}
+                            @if ( $userDetail->generation  == 0)
+                                สมาคม
+                            @else
+                            #YWC{{$userDetail->generation}}
+                            @endif  
+                                
+                        </div>
+                </div> 
+        </div>
         <div class="row team">
-           <div class="team-bg-img"></div>
+        <div class="team-bg">
+             <div class="team-bg-img"></div>
+        </div>
+       
          <div class="row team-red">  
          
             
@@ -19,6 +41,7 @@
                       
                      @foreach ($teamRed as $user)
                           <div class="member"> 
+                          
                            <div class="pic-frame">
                                <div class="pic-frame-border-out"></div>
                                <div class="pic-frame-icon"> </div>                             
@@ -75,6 +98,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                      @foreach ($teamGreen as $user)
                           <div class="member"> 
+                          
                            <div class="pic-frame">
                                <div class="pic-frame-border-out"></div>
                                <div class="pic-frame-icon"></div>                             
@@ -82,7 +106,14 @@
                                <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
                               
                            <div class="pic-frame-border-in"></div>
+                          
                          </div>
+                           <div class="labal-name">
+                                  {{ $user->nickname }} 
+                                  @if ($user->generation !=0 )
+                                     #{{$user->generation}}
+                                  @endif
+                           </div>
                       </div>
                      @endforeach
 

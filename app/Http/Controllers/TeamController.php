@@ -21,24 +21,45 @@ class TeamController extends Controller
 
 
     public function show(){
+        $userDetail= UserDetail::where('facebook_id',Auth::user()->facebook_id)->first();
+        if(!$userDetail) {
+                return redirect()->route('register');
+        }
+
+        
+        $teamImg="";
+        if($userDetail->team=='b') {
+                $teamImg="team_blue";
+        }else if($userDetail->team=='g'){
+                $teamImg="team_green";
+        }else if($userDetail->team=='o'){
+                $teamImg="team_orange";
+        }else if($userDetail->team=='r'){
+                $teamImg="team_red";
+        }else if($userDetail->team=='y'){
+                $teamImg="team_yellow";
+        } 
+        
+
+
          
-        $teamRed= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamRed= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'r')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamBlue= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamBlue= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'b')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamGreen= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamGreen= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'g')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamOrange= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamOrange= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'o')
                                   ->orderBy('generation', 'desc')->get();
 
-        $teamYellow= DB::table('user_details')->select('facebook_id','nikcname','team','group','generation')
+        $teamYellow= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'y')
                                   ->orderBy('generation', 'desc')->get();
                             
@@ -48,7 +69,9 @@ class TeamController extends Controller
                 'teamBlue' => $teamBlue,
                 'teamGreen' => $teamGreen,
                 'teamOrange' => $teamOrange,
-                'teamYellow' => $teamYellow
+                'teamYellow' => $teamYellow,
+                'user'=>Auth::user(), 
+                'userDetail' => $userDetail,'teamImg'=>$teamImg
             ]);      
     }
     /**
