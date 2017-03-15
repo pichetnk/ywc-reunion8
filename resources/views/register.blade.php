@@ -7,7 +7,7 @@
                  @include('profileimage')     
                 </div> 
 
-                 <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                 <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"  id="col-register">
                     <p class="registerHeader">ลงทะเบียน</p>
                     <form class="form-horizontal" id="registerForm" class="register" action="#">
                         <div class="form-group">
@@ -54,7 +54,7 @@
                                      <div class="random-team-border"></div>
                                     <div class="random-team-bg"></div>
                                    
-                                    <div class="random-team-label" > 
+                                     <div class="random-team-label" > 
                                         <div class="random-team-content" >
                                             <a id="btnRandomTeam" href="#" > สุ่มทีม </a> </div>
                                     </div>

@@ -36,7 +36,7 @@ Route::get('/team', function () {
     return view('team');
 })->name('team');
 */
-Route::get('/register', function () {
+Route::middleware('auth')->get('/register', function () {
     return view('register');    
 })->name('register');
 

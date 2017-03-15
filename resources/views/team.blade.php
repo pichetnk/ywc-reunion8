@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('layouts.app') @section('content')
 <div id="team" class="container-fluid">
   <div class="team-bg">
@@ -25,6 +26,52 @@
       <div class="row">
         <div class="col-lg-2 col-lg-offset-5 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
           <img src="/img/team_red.svg" class="img-responsive team-banner" alt="">
+=======
+@extends('layouts.app')
+@section('content')
+    <div id="team" class="container-fluid">
+        <div class="row profile">
+             <div class="col-lg-4 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                       
+                 @include('profileimage')     
+                </div> 
+                <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-team">
+                       <div class="team-show">
+                            <img src="/img/{{$teamImg}}.svg" class="img-responsive">    
+                            <div class="profile-name">
+                                
+                                {{$userDetail->nickname}}
+                                @if ( $userDetail->generation  == 0)
+                                    สมาคม
+                                @else
+                                #YWC{{$userDetail->generation}}
+                                @endif  
+                                    
+                            </div>
+                       </div>
+
+                      <div class="btn-order">
+                          <div class="btn-col">
+                             <div class="btn-box">
+                                        <div class="btn-box-border"></div>
+                                        <div class="btn-box-bg"></div>
+                                    
+                                        <div class="btn-box-label" > 
+                                            <div class="btn-box-content" >
+                                                <a  href="http://goo.gl/asrcu7"  target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
+                                        </div>
+                                </div>   
+                              </div> 
+                      </div>
+
+
+
+                </div> 
+        </div>
+        <div class="row team">
+        <div class="team-bg">
+             <div class="team-bg-img"></div>
+>>>>>>> 28eef00070f382f6cb1ba146c48720448b9663f2
         </div>
       </div>
       <div class="row">

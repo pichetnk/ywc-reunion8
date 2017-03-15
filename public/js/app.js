@@ -11235,7 +11235,9 @@ $("#register").ready(function () {
 
   $("#btnRandomTeam").on("click", function () {
     if (registerForm.valid()) {
-      axios.post('register', $("#registerForm").serialize()).then(function (res) {
+      var data = $("#registerForm").serialize();
+      $('#col-register').html('<div class="sk-circle">' + '<div class="sk-circle1 sk-child"></div>' + '<div class="sk-circle2 sk-child"></div>' + '<div class="sk-circle3 sk-child"></div>' + '<div class="sk-circle4 sk-child"></div>' + '<div class="sk-circle5 sk-child"></div>' + '<div class="sk-circle6 sk-child"></div>' + '<div class="sk-circle7 sk-child"></div>' + '<div class="sk-circle8 sk-child"></div>' + '<div class="sk-circle9 sk-child"></div>' + '<div class="sk-circle10 sk-child"></div>' + '<div class="sk-circle11 sk-child"></div>' + '<div class="sk-circle12 sk-child"></div></div> ');
+      axios.post('register', data).then(function (res) {
         var data = res.data;
         if (data.error_code == '00') {
           console.log('valid');
@@ -11271,7 +11273,7 @@ $("#shop").ready(function () {
 /* 10 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: Error\n    at /app/node_modules/webpack/lib/NormalModule.js:141:35\n    at /app/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /app/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/app/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.onRender [as callback] (/app/node_modules/sass-loader/index.js:273:13)\n    at Object.<anonymous> (/app/node_modules/async/dist/async.js:2237:31)\n    at apply (/app/node_modules/async/dist/async.js:20:25)\n    at Object.<anonymous> (/app/node_modules/async/dist/async.js:56:12)\n    at Object.callback (/app/node_modules/async/dist/async.js:843:16)\n    at options.error (/app/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 /* 11 */
