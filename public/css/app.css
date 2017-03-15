@@ -8746,8 +8746,8 @@ optgroup {
 
 .main-btn-tilt .main-btn-tilt-shadow {
   position: absolute;
-  top: .5em;
-  left: .8em;
+  top: .3em;
+  left: .4em;
   width: 100%;
   height: 100%;
   background-image: url(/fonts/tag_name_back.svg?1750f116d2dde320c6fd936dcaea8d38);
@@ -8765,11 +8765,13 @@ optgroup {
 
 .main-btn-tilt .main-btn-tilt-label {
   position: relative;
-  padding: 0.4em 2.3em;
+  width: 15em;
+  height: 3.5em;
+  top: 0.45em;
 }
 
 .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 400;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);

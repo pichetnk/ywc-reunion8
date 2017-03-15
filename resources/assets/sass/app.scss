@@ -371,8 +371,8 @@ optgroup {
 	}
 	.main-btn-tilt-shadow {
 		position: absolute;
-		top: .5em;
-		left: .8em;
+		top: .3em;
+		left: .4em;
 		@media (max-width: $screen-xs-max) {
 			top: .2.5em;
 			left: .4em;
@@ -386,9 +386,11 @@ optgroup {
 	}
 	.main-btn-tilt-label {
 		position: relative;
-		padding: 0.4em 2.3em;
+		width: 15em;
+		height: 3.5em;
+		top: 0.45em;
 		.main-btn-tilt-content {
-			font-size: 1.6em;
+			font-size: 1.5em;
 			@media (max-width: $screen-xs-max) {
 				font-size: 1em;
 			}
