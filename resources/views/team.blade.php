@@ -29,7 +29,7 @@
                                     
                                         <div class="btn-box-label" > 
                                             <div class="btn-box-content" >
-                                                <a  href="http://goo.gl/asrcu7" target="_Black" > สั่งของ </a> </div>
+                                                <a  href="http://goo.gl/asrcu7"  target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
                                         </div>
                                 </div>   
                               </div> 
