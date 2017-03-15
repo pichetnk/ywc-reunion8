@@ -21,6 +21,13 @@ services:
     volumes:
       - ./mysql-data:/var/lib/mysql
 
+  watch:
+    image: node:latest
+    entrypoint: npm run watch
+    working_dir: /app
+    volumes:
+      - ../:/app
+
   # be run at runtime
   composer:
     image: composer:latest
