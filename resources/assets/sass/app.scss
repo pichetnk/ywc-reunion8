@@ -1,158 +1,154 @@
-
-// Fonts
+ // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
-
 @import "mixins";
-
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 //@import 'fontface';
-
-@include font-face(DBHelvethaicaXMed ,"fonts/DB-Helvethaica-X-Med", null, null, ttf);
-@include font-face(DBHelvethaicaXBd ,"fonts/DB-Helvethaica-X-Bd", null, null, ttf);
-
-html,body { height: 100%; margin: 0px; padding: 0px; 
- font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
- font-size: 1em;
- color:  $color_text;
-   background-color: $color_gray;
+@include font-face(DBHelvethaicaXMed, "fonts/DB-Helvethaica-X-Med", null, null, ttf);
+@include font-face(DBHelvethaicaXBd, "fonts/DB-Helvethaica-X-Bd", null, null, ttf);
+html,
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+	font-size: 1em;
+	color: $color_text;
+	background-color: $color_gray;
 }
-input[type='text']  { 
-	font-size: 1.4em; 
-	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+
+input[type='text'] {
+	font-size: 1.4em;
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
 }
-optgroup { 
-	font-size: 1.4em; 
-	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
+
+optgroup {
+	font-size: 1.4em;
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
 }
 
 #app {
-	height:100%;
-  
+	height: 100%;
 }
+
 #appHome {
-   
-    height: 100%;
-    background-color:  $home-bg;
+	height: 100%;
+	background-color: $home-bg;
 	padding-top: 3em;
 }
 
-#timeline{
+#timeline {
 	padding-top: 5em;
 	min-height: 100%;
-    height: 100%;
-    background-color: $color_gray;
+	height: 100%;
+	background-color: $color_gray;
 }
+
 #shop {
 	padding-top: 5em;
 	min-height: 100%;
-    height: 100%;
-    background-color: $color_gray;
+	height: 100%;
+	background-color: $color_gray;
 }
 
 #team {
 	.profile {
-		padding-top:  2em;
+		padding-top: 2em;
 	}
 }
 
-.textCenter{
+.textCenter {
 	text-align: center;
 }
-.row-profile{
+
+.row-profile {
 	display: flex;
 }
+
 .col-team {
-	margin-top : 10%;
-}
-.navbar-header{
-   left: 50%;
-   position: relative;
-   transform: translateX(-50%);
-   
-
-   img {
-       max-width: 90px;
-   }
+	margin-top: 10%;
 }
 
+.navbar-header {
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	img {
+		max-width: 90px;
+	}
+}
 
 .navbar_boder {
 	background-image: $url_nav_bar;
 	background-size: contain;
 	background-position: center;
- 	background-repeat: repeat-x;
-    background-position: left 1em top;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-	@media (max-width: $screen-xs-max) { 
-        top : 2em;
-    }
+	background-repeat: repeat-x;
+	background-position: left 1em top;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@media (max-width: $screen-xs-max) {
+		top: 2em;
+	}
 }
+
 .navbar-ywc {
 	border: 0px;
 	margin-bottom: 0px;
 	.menuItem {
-		color:  $color_text_nav ;
-	} 
- 	a {
-   	   font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-   	   font-size: 1.8em;
-	  
-     } 
+		color: $color_text_nav;
+	}
+	a {
+		font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+		font-size: 1.8em;
+	}
 }
-.registerHeader { 
-   	 font-size: 2em;
-	 text-align: center;
-	 color:  $color_text;
+
+.registerHeader {
+	font-size: 2em;
+	text-align: center;
+	color: $color_text;
 }
 
 .random-team {
 	display: inline-block;
 	position: relative;
 	font-size: 1em;
-    position: relative;
-	
+	position: relative;
 	&:hover {
-        font-size: 1.1em;
-		cursor:pointer
-    }
-
-
-	 .random-team-label {
+		font-size: 1.1em;
+		cursor: pointer
+	}
+	.random-team-label {
 		position: relative;
-	 	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-	    padding: 2.0em;
+		font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+		padding: 2.0em;
 		.random-team-content {
 			font-size: 1.2em;
 			font-weight: normal;
 			text-transform: uppercase;
-			a{
+			a {
 				color: $black;
 				text-decoration: none;
 			}
-		 }
-	 }
-	.random-team-bg{
+		}
+	}
+	.random-team-bg {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;		 
+		height: 100%;
 		position: absolute;
 		background-image: $url_random;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
-	.random-team-border{
+	.random-team-border {
 		position: absolute;
 		top: 0.2em;
 		left: 0.2em;
@@ -161,135 +157,125 @@ optgroup {
 		background-image: $url_random_border;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;	
-
+		background-position: center;
 	}
 }
 
 .fb-login {
-    float: right;
-    right: 50%;
-    position: relative;
-
-.fb-btn {
-	display: inline-block;
+	float: right;
+	right: 50%;
 	position: relative;
-	font-size: 10px;
-    right: -50%;
-    position: relative;
-	
-	&:hover {
-        font-size: 11px;
-		cursor:pointer
-    }
-
-	.fb-btn-border {
-		position: absolute;
-		top: -0.5em;
-		left: -0.6em;
-		width: 100%;
-		height: 100%;
-		background-image: $url_facebooklogin_back;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.fb-btn-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: $url_facebooklogin;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.fb-btn-shadow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: $url_facebooklogin_back;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.fb-btn-label {
+	.fb-btn {
+		display: inline-block;
 		position: relative;
-		padding: 3em;
-		.fb-btn-content {
-			font-size: 1.5em;
-			font-weight: normal;
-			text-transform: uppercase;
-			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-			transform: rotate(-2.5deg);
-			.fb-btn-space {
-				display: inline-block;
-				width: 1.9em;
-			}
-			.fb-btn-text {
-				display: inline-block;
-				position: relative;
-				top: -0.15em;
-				color: $white;
+		font-size: 10px;
+		right: -50%;
+		position: relative;
+		&:hover {
+			font-size: 11px;
+			cursor: pointer
+		}
+		.fb-btn-border {
+			position: absolute;
+			top: -0.5em;
+			left: -0.6em;
+			width: 100%;
+			height: 100%;
+			background-image: $url_facebooklogin_back;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.fb-btn-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: $url_facebooklogin;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.fb-btn-shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: $url_facebooklogin_back;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.fb-btn-label {
+			position: relative;
+			padding: 3em;
+			.fb-btn-content {
+				font-size: 1.5em;
+				font-weight: normal;
+				text-transform: uppercase;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: rotate(-2.5deg);
+				.fb-btn-space {
+					display: inline-block;
+					width: 1.9em;
+				}
+				.fb-btn-text {
+					display: inline-block;
+					position: relative;
+					top: -0.15em;
+					color: $white;
+				}
 			}
 		}
 	}
-}
 }
 
 .member {
-    position: relative;
-    display: inline-table;
-   /* padding-left: 3em;
+	position: relative;
+	display: inline-table;
+	/* padding-left: 3em;
     padding-top: 2em;*/
 	color: $black;
-	font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
 	.labal-name {
 		position: relative;
-		
-		@media (max-width: $screen-xs-max) { 
-        	top: -8.5em;
-			font-size: 1.2em;
-		}
-		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+		@media (max-width: $screen-xs-max) {
 			top: -8.5em;
 			font-size: 1.2em;
 		}
-		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			top: -8.5em;
+			font-size: 1.2em;
+		}
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 			top: -9.1em;
 			font-size: 1.8em;
 		}
-		@media (min-width: $screen-lg-min) { 
+		@media (min-width: $screen-lg-min) {
 			top: -9.1em;
 			font-size: 1.8em;
 		}
-
-		
 		text-align: center;
 	}
 }
+
 .pic-frame {
 	display: inline-block;
 	position: relative;
-    @media (max-width: $screen-xs-max) { 
-        font-size: 12px;
-    }
-    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
-        font-size: 12px;
-     }
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
-        font-size: 20px;
-     }
-    @media (min-width: $screen-lg-min) { 
-        font-size: 20px;
-    }
-
-
-	
+	@media (max-width: $screen-xs-max) {
+		font-size: 12px;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		font-size: 12px;
+	}
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		font-size: 20px;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: 20px;
+	}
 	.pic-frame-border-out {
 		position: absolute;
 		width: 100%;
@@ -331,12 +317,11 @@ optgroup {
 	}
 }
 
-.register{
- 
+.register {
 	background-color: $register_bg;
 	padding-top: 5em;
 	font-size: 1.7em;
-	@media (min-width: $screen-md-min)  { 
+	@media (min-width: $screen-md-min) {
 		height: 100%;
 	}
 }
@@ -346,7 +331,6 @@ optgroup {
 	transform: rotate(-2.5deg);
 	font-size: 2em;
 	color: $brown;
-
 }
 
 .main-btn-tilt {
@@ -379,7 +363,7 @@ optgroup {
 		position: absolute;
 		top: .5em;
 		left: .8em;
-		@media (max-width: $screen-xs-max) { 
+		@media (max-width: $screen-xs-max) {
 			top: .2.5em;
 			left: .4em;
 		}
@@ -395,9 +379,9 @@ optgroup {
 		padding: 2.3em;
 		.main-btn-tilt-content {
 			font-size: 1.6em;
-			@media (max-width: $screen-xs-max) { 
-        			font-size: 1em;
-    		}
+			@media (max-width: $screen-xs-max) {
+				font-size: 1em;
+			}
 			font-weight: bold;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: rotate(-2.5deg);
@@ -412,12 +396,11 @@ optgroup {
 }
 
 .team {
-    min-height: 100px;
-	
-	.team-bg{
+	min-height: 100px;
+	.team-bg {
 		position: relative;
 		overflow: hidden;
-		.team-bg-img{
+		.team-bg-img {
 			background-image: $url_bg_line;
 			position: fixed;
 			height: 100%;
@@ -425,18 +408,17 @@ optgroup {
 			opacity: 0.2;
 			top: 0;
 			left: 0;
-		/* margin-top: -5em;*/
-    	}
+			/* margin-top: -5em;*/
+		}
 	}
-    
-    .team-banner {
-        padding-top: 4em;
-        padding-bottom: 2em;
-    }
-    .team-red {
-        background-color: $team_red ;
-       // background-image: $url_bg_line;
-    /*
+	.team-banner {
+		padding-top: 4em;
+		padding-bottom: 2em;
+	}
+	.team-red {
+		background-color: $team_red;
+		// background-image: $url_bg_line;
+		/*
         :after {
             content: "";
             background: $url_bg_line;
@@ -448,186 +430,177 @@ optgroup {
             position: absolute;
             z-index: -1;   
         }*/
-    }
-
-    .team-blue {
-        background-color: $team_blue ;
-    }
-     .team-green {
-        background-color: $team_green ;
-    }
-     .team-orange {
-        background-color: $team_orange ;
-    }
-
-    .team-yellow {
-        background-color: $team_yellow ;
-    }
-
+	}
+	.team-blue {
+		background-color: $team_blue;
+	}
+	.team-green {
+		background-color: $team_green;
+	}
+	.team-orange {
+		background-color: $team_orange;
+	}
+	.team-yellow {
+		background-color: $team_yellow;
+	}
 	.buttomTeam {
 		height: 3em;
 	}
-
 }
 
 .timeline {
-    display: inline-block;
-    position: relative;
-    font-size: 1em;
-    white-space: nowrap;
-
+	display: inline-block;
+	position: relative;
+	font-size: 1em;
+	white-space: nowrap;
 }
 
 
 /*timeline-times*/
 
 .timeline-times {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
 }
 
 .timeline-times-each {
-    position: relative;
-    margin: -0.4em 0em;
-    padding-right: 3em;
-    line-height: 6.7em;
-    vertical-align: center;
+	position: relative;
+	margin: -0.4em 0em;
+	padding-right: 3em;
+	line-height: 6.7em;
+	vertical-align: center;
 }
 
 .timeline-times-each-label {
-	
-    color: $black;
-    font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
-    font-weight: 400;
-    font-size: 1.9em;
+	color: $black;
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+	font-weight: 400;
+	font-size: 1.9em;
 }
 
 
 /*timeline-mainline*/
 
 .timeline-mainline {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    margin: 0;
-    padding: 2em 0em;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin: 0;
+	padding: 2em 0em;
 }
 
 .timeline-mainline-each {
-    display: block;
-    position: relative;
+	display: block;
+	position: relative;
 }
 
 .timeline-mainline-each-node {
-    position: relative;
-    margin: -0.15em 0em;
-    width: 2.4em;
-    height: 2.4em;
-    background-image: $url_dot_timeline;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+	position: relative;
+	margin: -0.15em 0em;
+	width: 2.4em;
+	height: 2.4em;
+	background-image: $url_dot_timeline;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .timeline-mainline-each-line {
-    position: relative;
-    display: block;
-    left: 50%;
-    margin-left: -0.065em;
-    width: 0.14em;
-    height: 4.5em;
-    background-color:$black;
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -0.065em;
+	width: 0.14em;
+	height: 4.5em;
+	background-color: $black;
 }
 
-.timeline-description{
+.timeline-description {
 	position: absolute;
-    top: 1em;
-    transform: rotate(-6deg);
-    left: 1em;
+	top: 1em;
+	transform: rotate(-6deg);
+	left: 1em;
 	color: $black;
-    
-    font-weight: 400;
-    font-size: 1.9em;
+	font-weight: 400;
+	font-size: 1.9em;
 }
 
 
 /*timeline-events*/
 
 .timeline-events {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    /* ต้อง set ให้ ความกว้างของอันนี้ = ความกว้างมากที่สุดของ กล่องข้อความสีเหลือง ไม่งั้นจะไม่สามารถ set ให้ทั้ง .timeline อยู่ตรงกลางหน้าได้*/
-    width: 20em;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	/* ต้อง set ให้ ความกว้างของอันนี้ = ความกว้างมากที่สุดของ กล่องข้อความสีเหลือง ไม่งั้นจะไม่สามารถ set ให้ทั้ง .timeline อยู่ตรงกลางหน้าได้*/
+	width: 20em;
 }
 
 .timeline-events-each {
-    position: relative;
-    height: 6.6em;
-    padding-left: 4em;
+	position: relative;
+	height: 6.6em;
+	padding-left: 4em;
 }
 
 .timeline-events-each-label {
-    position: absolute;
-    top: -2.1em;
-    height: 100%;
+	position: absolute;
+	top: -2.1em;
+	height: 100%;
 	img {
-       width: 12em;
-    }
-
+		width: 12em;
+	}
 }
 
 .timeline-events-each-label-frame {
-    position: absolute;
-    bottom: 0;
-    /*แก้ตรงนี้ให้ภาพมันขนาดพอดีครับ*/
-    zoom: 0.75;
+	position: absolute;
+	bottom: 0;
+	/*แก้ตรงนี้ให้ภาพมันขนาดพอดีครับ*/
+	zoom: 0.75;
 }
 
 .timeline-center-line {
-    position: relative;
-    display: block;
-    left: 50%;
-    margin-left: -0.065em;
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -0.065em;
 	height: 35em;
-    border-left: 0.2em dashed $black;
+	border-left: 0.2em dashed $black;
 }
 
 .timeline-center-dot {
-    position: relative;
-    margin: -0.15em 0em;
-    width: 2.4em;
-    height: 2.4em;
+	position: relative;
+	margin: -0.15em 0em;
+	width: 2.4em;
+	height: 2.4em;
 	left: 5.5em;
-    background-image: $url_dot;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+	background-image: $url_dot;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
-
 .location {
-	    position: relative;
-		color: $color_text;
+	position: relative;
+	color: $color_text;
 	.location-label {
 		position: absolute;
 		top: -2em;
 		left: 1em;
-		transform: rotate(-6deg);	
+		transform: rotate(-6deg);
 		.textover {
-			font-size: 3.5em;	
+			font-size: 3.5em;
 		}
 	}
 	.map {
-	    background-image: $url_location_tag;
-    	background-position: center;
-    	background-repeat: no-repeat;
-    	background-size: contain;
-		transform: rotate(-6deg);		
+		background-image: $url_location_tag;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transform: rotate(-6deg);
 		p {
 			text-align: center;
-			font-size: 1.5em;	
+			font-size: 1.5em;
 			padding: 1em;
 			margin-top: 2.5em;
 		}
@@ -635,7 +608,4 @@ optgroup {
 			height: 23em;
 		}
 	}
-
-
-
 }
