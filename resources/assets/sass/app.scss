@@ -3,9 +3,12 @@
 // Variables
 @import "variables";
 @import "mixins";
+
+@import  "spinners/8-circle";
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-<<<<<<< HEAD
+ 
 //@import 'fontface';
 @include font-face(DBHelvethaicaXMed, "fonts/DB-Helvethaica-X-Med", null, null, ttf);
 @include font-face(DBHelvethaicaXBd, "fonts/DB-Helvethaica-X-Bd", null, null, ttf);
@@ -18,19 +21,6 @@ body {
 	font-size: 1em;
 	color: $color_text;
 	background-color: $color_gray;
-=======
-
-@import  "spinners/8-circle";
-
-@include font-face(DBHelvethaicaXMed ,"fonts/DB-Helvethaica-X-Med", null, null, ttf);
-@include font-face(DBHelvethaicaXBd ,"fonts/DB-Helvethaica-X-Bd", null, null, ttf);
-
-html,body { height: 100%; margin: 0px; padding: 0px; 
- font-family: "DBHelvethaicaXMed",Fallback, DBHelvethaicaXMed;
- font-size: 1em;
- color:  $color_text;
-   background-color: $color_gray;
->>>>>>> 28eef00070f382f6cb1ba146c48720448b9663f2
 }
 
 input[type='text'] {
@@ -175,11 +165,9 @@ optgroup {
 	}
 }
 
-<<<<<<< HEAD
-@media(max-width:767px) {
-	.fb-btn {
-		font-size: 0.7rem;
-=======
+ 
+
+
 .btn-box {
 	display: inline-block;
 	position: relative;
@@ -231,6 +219,7 @@ optgroup {
 	}
 }
 
+
 .fb-login {
     float: right;
     right: 50%;
@@ -241,13 +230,22 @@ optgroup {
 	position: relative;
 	font-size: 10px;
     right: -50%;
-    position: relative;
-	
+    position: relative;	
 	&:hover {
-        font-size: 11px;
+        @media(min-width: 768px) {
+	    	font-size: 1.5rem;
+		}
+		@media(max-width:767px) {	 
+			font-size: 0.8rem;
+		}
 		cursor:pointer
     }
-
+	@media(min-width: 768px) {
+	    font-size: 1.4rem;
+	}
+	@media(max-width:767px) {	 
+		font-size: 0.7rem;
+	}
 	.fb-btn-border {
 		position: absolute;
 		top: -0.5em;
@@ -258,40 +256,10 @@ optgroup {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
->>>>>>> 28eef00070f382f6cb1ba146c48720448b9663f2
+ 
 	}
-}
 
-@media(min-width: 768px) {
-	.fb-btn {
-		font-size: 1.4rem;
-	}
-}
-
-.fb-login {
-	// float: right;
-	// right: 50%;
-	// position: relative;
-	text-align: center;
-	.fb-btn {
-		display: inline-block;
-		position: relative;
-		position: relative;
-		&:hover {
-			cursor: pointer
-		}
-		.fb-btn-border {
-			position: absolute;
-			top: -0.4em;
-			left: -0.45em;
-			width: 100%;
-			height: 100%;
-			background-image: $url_facebooklogin_back;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-		.fb-btn-background {
+	.fb-btn-background {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -301,8 +269,8 @@ optgroup {
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-		}
-		.fb-btn-shadow {
+	}
+	.fb-btn-shadow {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -312,7 +280,7 @@ optgroup {
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-		}
+	}
 		.fb-btn-label {
 			position: relative;
 			padding: 3em;
@@ -718,25 +686,22 @@ optgroup {
 	}
 }
 
-<<<<<<< HEAD
+ 
 #register {
 	#generation {
 		font-size: 1.4rem;
 	}
-=======
-
 
 }
 
 .btn-order {
 	width:  100%;
 	.btn-col{
-		width:  25%;
+		width:  40%;
 		margin: 0 auto;
 	}
 }
 
 .team-show {
 	width:  100%;
->>>>>>> 28eef00070f382f6cb1ba146c48720448b9663f2
 }
