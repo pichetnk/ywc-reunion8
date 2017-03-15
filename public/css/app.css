@@ -8790,16 +8790,12 @@ optgroup {
   color: black;
 }
 
-.team {
-  min-height: 100px;
-}
-
-.team .team-bg {
+.team-bg {
   position: relative;
   overflow: hidden;
 }
 
-.team .team-bg .team-bg-img {
+.team-bg .team-bg-img {
   background-image: url(/fonts/bg_line.svg?36dda48fb683894eee76a685e364447c);
   position: fixed;
   height: 100%;
@@ -8808,6 +8804,10 @@ optgroup {
   top: 0;
   left: 0;
   /* margin-top: -5em;*/
+}
+
+.team {
+  min-height: 100px;
 }
 
 .team .team-banner {

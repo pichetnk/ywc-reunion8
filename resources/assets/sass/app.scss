@@ -407,22 +407,23 @@ optgroup {
 	}
 }
 
+.team-bg {
+	position: relative;
+	overflow: hidden;
+	.team-bg-img {
+		background-image: $url_bg_line;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		opacity: 0.2;
+		top: 0;
+		left: 0;
+		/* margin-top: -5em;*/
+	}
+}
+
 .team {
 	min-height: 100px;
-	.team-bg {
-		position: relative;
-		overflow: hidden;
-		.team-bg-img {
-			background-image: $url_bg_line;
-			position: fixed;
-			height: 100%;
-			width: 100%;
-			opacity: 0.2;
-			top: 0;
-			left: 0;
-			/* margin-top: -5em;*/
-		}
-	}
 	.team-banner {
 		padding-top: 4em;
 		padding-bottom: 2em;
