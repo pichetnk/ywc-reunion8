@@ -7,17 +7,36 @@
                  @include('profileimage')     
                 </div> 
                 <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-team">
-                        <img src="/img/{{$teamImg}}.svg" class="img-responsive">    
-                        <div class="profile-name">
-                            
-                            {{$userDetail->nickname}}
-                            @if ( $userDetail->generation  == 0)
-                                สมาคม
-                            @else
-                            #YWC{{$userDetail->generation}}
-                            @endif  
+                       <div class="team-show">
+                            <img src="/img/{{$teamImg}}.svg" class="img-responsive">    
+                            <div class="profile-name">
                                 
-                        </div>
+                                {{$userDetail->nickname}}
+                                @if ( $userDetail->generation  == 0)
+                                    สมาคม
+                                @else
+                                #YWC{{$userDetail->generation}}
+                                @endif  
+                                    
+                            </div>
+                       </div>
+
+                      <div class="btn-order">
+                          <div class="btn-col">
+                             <div class="btn-box">
+                                        <div class="btn-box-border"></div>
+                                        <div class="btn-box-bg"></div>
+                                    
+                                        <div class="btn-box-label" > 
+                                            <div class="btn-box-content" >
+                                                <a  href="http://goo.gl/asrcu7" target="_Black" > สั่งของ </a> </div>
+                                        </div>
+                                </div>   
+                              </div> 
+                      </div>
+
+
+
                 </div> 
         </div>
         <div class="row team">
