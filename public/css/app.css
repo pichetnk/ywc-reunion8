@@ -8767,7 +8767,7 @@ optgroup {
   position: relative;
   width: 15em;
   height: 3.5em;
-  top: 0.45em;
+  top: 0.5em;
 }
 
 .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
@@ -9017,4 +9017,8 @@ optgroup {
 
 .location .map img {
   height: 23em;
+}
+
+#register #generation {
+  font-size: 1.4rem;
 }

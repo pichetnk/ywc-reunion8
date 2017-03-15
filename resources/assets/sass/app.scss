@@ -388,7 +388,7 @@ optgroup {
 		position: relative;
 		width: 15em;
 		height: 3.5em;
-		top: 0.45em;
+		top: 0.5em;
 		.main-btn-tilt-content {
 			font-size: 1.5em;
 			@media (max-width: $screen-xs-max) {
@@ -619,5 +619,11 @@ optgroup {
 		img {
 			height: 23em;
 		}
+	}
+}
+
+#register {
+	#generation {
+		font-size: 1.4rem;
 	}
 }
