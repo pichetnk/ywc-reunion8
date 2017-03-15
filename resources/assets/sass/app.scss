@@ -346,7 +346,7 @@ optgroup {
 .main-btn-tilt {
 	display: inline-block;
 	position: relative;
-	font-size: 1em;
+	font-size: 1.5rem;
 	.main-btn-tilt-border {
 		position: absolute;
 		top: 0;
@@ -386,13 +386,13 @@ optgroup {
 	}
 	.main-btn-tilt-label {
 		position: relative;
-		padding: 2.3em;
+		padding: 0.4em 2.3em;
 		.main-btn-tilt-content {
 			font-size: 1.6em;
 			@media (max-width: $screen-xs-max) {
 				font-size: 1em;
 			}
-			font-weight: bold;
+			font-weight: 400;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: rotate(-2.5deg);
 			.main-btn-tilt-text {

@@ -8717,7 +8717,7 @@ optgroup {
 .main-btn-tilt {
   display: inline-block;
   position: relative;
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
 .main-btn-tilt .main-btn-tilt-border {
@@ -8765,12 +8765,12 @@ optgroup {
 
 .main-btn-tilt .main-btn-tilt-label {
   position: relative;
-  padding: 2.3em;
+  padding: 0.4em 2.3em;
 }
 
 .main-btn-tilt .main-btn-tilt-label .main-btn-tilt-content {
   font-size: 1.6em;
-  font-weight: bold;
+  font-weight: 400;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
 }
