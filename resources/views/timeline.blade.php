@@ -11,8 +11,7 @@
                 
                 <div class="map">
                       <p>
-                      E88 Bangkok <br>
-                      E88 Building 2Fl., Sukhumvit 69-71 <br>
+                      E88 Bangkok,Sukhumvit 69-71 <br>
                      
                       </p>
                 </div>
@@ -84,7 +83,7 @@
                        
                             <div class="timeline-events-each-label-frame">
                                 <img src="/img/tap_timeline.svg" alt="">
-                                <strong class="timeline-description">กิจกรรมสักอย่าง</strong>
+                                <strong class="timeline-description">สานสัมพันธ์</strong>
                             </div>
                         </div>
                     </div>

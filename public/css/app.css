@@ -8537,7 +8537,8 @@ optgroup {
 }
 
 #appHome {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   background-color: #FFF174;
   padding-top: 3em;
 }
@@ -8985,13 +8986,13 @@ optgroup {
 
 @media (max-width: 767px) {
   .main-btn-tilt {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .main-btn-tilt {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -9264,8 +9265,8 @@ optgroup {
 
 .location .location-label {
   position: absolute;
-  top: -2em;
-  left: 1em;
+  top: -2.7em;
+  left: 1.2em;
   -webkit-transform: rotate(-6deg);
           transform: rotate(-6deg);
 }
@@ -9285,9 +9286,9 @@ optgroup {
 
 .location .map p {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   padding: 1em;
-  margin-top: 2.5em;
+  margin-top: 2.4em;
 }
 
 .location .map img {

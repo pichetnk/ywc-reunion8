@@ -41,7 +41,8 @@ optgroup {
 }
 
 #appHome {
-	height: 100%;
+	height: auto; 
+	min-height: 100%;
 	background-color: $home-bg;
 	padding-top: 3em;
 }
@@ -416,10 +417,10 @@ optgroup {
 	position: relative;
 	font-size: 1.5rem;
 	@media (max-width: $screen-xs-max) {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 	}
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 	}
 	/*
 	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
@@ -683,8 +684,8 @@ optgroup {
 	color: $color_text;
 	.location-label {
 		position: absolute;
-		top: -2em;
-		left: 1em;
+		top: -2.7em;
+		left: 1.2em;
 		transform: rotate(-6deg);
 		.textover {
 			font-size: 3.5em;
@@ -698,9 +699,9 @@ optgroup {
 		transform: rotate(-6deg);
 		p {
 			text-align: center;
-			font-size: 1.5em;
+			font-size: 2em;
 			padding: 1em;
-			margin-top: 2.5em;
+			margin-top: 2.4em;
 		}
 		img {
 			height: 23em;
