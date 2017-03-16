@@ -43,7 +43,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     @if(Route::current()->getName() != 'home')
-                        <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=" "/></a>
+                        <a class="navbar-brand" href="{{URL::to('/')}}"><img src="img/logo.svg" alt=" "/></a>
                     @endif
                     
                 </div>
