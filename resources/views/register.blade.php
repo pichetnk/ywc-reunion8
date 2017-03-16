@@ -22,7 +22,7 @@
                                 
                                 <select class="form-control" name="generation" id="generation">
                                     
-                                    <option  value="" >---Plase Select---</option>
+                                    <option  value="" >---Please Select---</option>
                                     <option  value="0">สมาคม</option>
                                     @for ($i = 1; $i <= 14; $i++)
                                         <option  value="{{ $i }}">{{ $i }}</option>
