@@ -9309,6 +9309,18 @@ optgroup {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .btn-order .btn-col {
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .btn-order .btn-col {
+    width: 65%;
+  }
+}
+
 .team-show {
   width: 100%;
 }

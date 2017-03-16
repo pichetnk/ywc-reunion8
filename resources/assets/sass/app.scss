@@ -719,8 +719,16 @@ optgroup {
 
 .btn-order {
 	width:  100%;
+	
 	padding-top: 5em;
 	.btn-col{
+
+		@media (max-width: $screen-xs-max) {
+			width:  65%;
+		}
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			width:  65%;
+		}
 		width:  40%;
 		margin: 0 auto;
 	}

@@ -61,6 +61,9 @@
 
               <div class="pic-frame-border-in"></div>
             </div>
+            <div class="labal-name">
+              {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+            </div>
           </div>
           @endforeach
 
@@ -90,7 +93,11 @@
 
               <div class="pic-frame-border-in"></div>
             </div>
+            <div class="labal-name">
+              {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+            </div>
           </div>
+          
           @endforeach
 
         </div>
@@ -150,6 +157,9 @@
 
               <div class="pic-frame-border-in"></div>
             </div>
+            <div class="labal-name">
+              {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+            </div>
           </div>
           @endforeach
         </div>
@@ -174,6 +184,9 @@
               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
 
               <div class="pic-frame-border-in"></div>
+            </div>
+           <div class="labal-name">
+              {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
             </div>
           </div>
           @endforeach
