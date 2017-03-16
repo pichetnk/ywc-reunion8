@@ -478,7 +478,7 @@ optgroup {
 		.main-btn-tilt-content {
 			font-size: 1.5em;
 			@media (max-width: $screen-xs-max) {
-				font-size: 1.2em;
+				font-size: 1.3em;
 			}
 			font-weight: 400;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)

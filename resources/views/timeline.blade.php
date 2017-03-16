@@ -40,10 +40,10 @@
                         <strong class="timeline-times-each-label">18.00 น.</strong>
                     </div>
                     <div class="timeline-times-each">
-                        <strong class="timeline-times-each-label">19.00 น.</strong>
+                        <strong class="timeline-times-each-label">20.00 น.</strong>
                     </div>
                     <div class="timeline-times-each">
-                        <strong class="timeline-times-each-label">20.00 น.</strong>
+                        <strong class="timeline-times-each-label">21.00 น.</strong>
                     </div>
                     <div class="timeline-times-each">
                         <strong class="timeline-times-each-label">23.00 น.</strong>
