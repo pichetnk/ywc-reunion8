@@ -120,7 +120,7 @@
             <div class="pic-frame">
               <div class="pic-frame-border-out"></div>
               <div class="pic-frame-icon"></div>
-
+              
               <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
 
               <div class="pic-frame-border-in"></div>

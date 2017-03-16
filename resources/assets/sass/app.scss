@@ -592,6 +592,7 @@ optgroup {
 .timeline-mainline-each {
 	display: block;
 	position: relative;
+	text-align: center;
 }
 
 .timeline-mainline-each-node {
@@ -616,13 +617,14 @@ optgroup {
 }
 
 .timeline-description {
-	position: absolute;
-	top: 1em;
-	transform: rotate(-6deg);
-	left: 1em;
-	color: $black;
-	font-weight: 400;
-	font-size: 1.9em;
+    position: absolute;
+    top: 0.65em;
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+    left: 1em;
+    color: black;
+    font-weight: 400;
+    font-size: 1.9em;
 }
 
 
@@ -672,13 +674,19 @@ optgroup {
 	margin: -0.15em 0em;
 	width: 2.4em;
 	height: 2.4em;
-	left: 5.5em;
+	/*left: 5.5em;*/
+	display: inline-block;
 	background-image: $url_dot;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
+ 
+.img-map:hover {
+   	transform: scale(1.05, 1.05);
+
+}
 .location {
 	position: relative;
 	color: $color_text;
@@ -691,6 +699,7 @@ optgroup {
 			font-size: 3.5em;
 		}
 	}
+
 	.map {
 		background-image: $url_location_tag;
 		background-position: center;
@@ -703,9 +712,7 @@ optgroup {
 			padding: 1em;
 			margin-top: 2.4em;
 		}
-		img {
-			height: 23em;
-		}
+		
 	}
 }
 

@@ -9170,6 +9170,7 @@ optgroup {
 .timeline-mainline-each {
   display: block;
   position: relative;
+  text-align: center;
 }
 
 .timeline-mainline-each-node {
@@ -9195,9 +9196,9 @@ optgroup {
 
 .timeline-description {
   position: absolute;
-  top: 1em;
+  top: 0.65em;
   -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+  transform: rotate(-6deg);
   left: 1em;
   color: black;
   font-weight: 400;
@@ -9251,11 +9252,17 @@ optgroup {
   margin: -0.15em 0em;
   width: 2.4em;
   height: 2.4em;
-  left: 5.5em;
+  /*left: 5.5em;*/
+  display: inline-block;
   background-image: url(/fonts/dot.svg?904821125697fc602fd1ed9b78a87277);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.img-map:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 
 .location {
@@ -9289,10 +9296,6 @@ optgroup {
   font-size: 2em;
   padding: 1em;
   margin-top: 2.4em;
-}
-
-.location .map img {
-  height: 23em;
 }
 
 #register #generation {

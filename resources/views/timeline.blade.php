@@ -4,9 +4,10 @@
 
 
 <div class="row" id="timeline">
-        <div class="col-lg-4 col-lg-offset-1">
-         <img src="/img/MAP-E88-04.jpg" class="img-responsive">
-         
+        <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
+            <a href="http://www.e88bangkok.com/" target="_blank">
+             <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
+             </a>
             <div class="location">
                 
                 <div class="map">
@@ -22,14 +23,14 @@
                  </div>
             </div>
         </div>
-        <div class="col-lg-2 visible-lg-block">
+        <div class="col-md-2 visible-lg-block">
              <div class="timeline-mainline-each">
                 <div class="timeline-center-dot"></div>
                 <div class="timeline-center-line"></div>
                 <div class="timeline-center-dot"></div>
             </div>
         </div>
-        <div class="col-lg-5">
+        <div class="col-md-4 col-xs-10 col-xs-offset-1">
             <div class="timeline">
                 <div class="timeline-times">
                     <div class="timeline-times-each">
