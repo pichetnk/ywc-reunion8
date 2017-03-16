@@ -2,8 +2,8 @@
 @section('content')
 
 
-
-<div class="row" id="timeline">
+<div id="timeline" class="container-fluid">
+<div class="row">
         <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
             <a href="http://www.e88bangkok.com/" target="_blank">
              <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
@@ -30,7 +30,7 @@
                 <div class="timeline-center-dot"></div>
             </div>
         </div>
-        <div class="col-md-4 col-xs-10 col-xs-offset-1">
+        <div class="col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
             <div class="timeline">
                 <div class="timeline-times">
                     <div class="timeline-times-each">
@@ -115,10 +115,9 @@
                 </div>
             </div>
 
-        </div>
-       
+        </div>       
 </div>
 
-
+</div>
 
 @endsection
