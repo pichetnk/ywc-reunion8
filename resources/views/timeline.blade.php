@@ -92,7 +92,7 @@
                         <div class="timeline-events-each-label">
                             <div class="timeline-events-each-label-frame">
                                 <img src="/img/tap_timeline.svg" alt="">
-                                <strong class="timeline-description">Ignight</strong>
+                                <strong class="timeline-description">Ignite</strong>
                             </div>
                         </div>
                     </div>
