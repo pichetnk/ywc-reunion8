@@ -9207,7 +9207,8 @@ optgroup {
 
 @media (max-width: 767px) {
   .timeline-description {
-    top: 0.3 0.8em;
+    top: 0.3em;
+    left: 0.8em;
   }
 }
 
