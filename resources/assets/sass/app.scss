@@ -26,6 +26,9 @@ body {
 input[type='text'] {
 	font-size: 1.4em;
 	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+    line-height: 2rem;
+    height:2.8rem;
+    padding: 0.7em 0.4em;
 }
 
 optgroup {
@@ -233,19 +236,20 @@ optgroup {
     right: -50%;
     position: relative;	
 	&:hover {
+		cursor:pointer;
         @media(min-width: 768px) {
 	    	font-size: 1.5rem;
 		}
 		@media(max-width:767px) {	 
 			font-size: 0.8rem;
+		}	
+		
+		@media(min-width: 768px) {
+			font-size: 1.4rem;
 		}
-		cursor:pointer
-    }
-	@media(min-width: 768px) {
-	    font-size: 1.4rem;
-	}
-	@media(max-width:767px) {	 
-		font-size: 0.7rem;
+		@media(max-width:767px) {	 
+			font-size: 0.7rem;
+		}
 	}
 	.fb-btn-border {
 		position: absolute;
@@ -411,6 +415,23 @@ optgroup {
 	display: inline-block;
 	position: relative;
 	font-size: 1.5rem;
+	@media (max-width: $screen-xs-max) {
+			font-size: 1.2rem;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			font-size: 1.2rem;
+	}
+	/*
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			top: -11.2em;
+			font-size: 1.8em;
+	}
+	@media (min-width: $screen-lg-min) {
+			top: -11.2em;
+			font-size: 1.8em;
+	}	*/
+
+	
 	.main-btn-tilt-border {
 		position: absolute;
 		top: 0;
@@ -456,7 +477,7 @@ optgroup {
 		.main-btn-tilt-content {
 			font-size: 1.5em;
 			@media (max-width: $screen-xs-max) {
-				font-size: 1em;
+				font-size: 1.2em;
 			}
 			font-weight: 400;
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
@@ -691,6 +712,7 @@ optgroup {
 #register {
 	#generation {
 		font-size: 1.4rem;
+		height: 3rem;
 	}
 
 }
