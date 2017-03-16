@@ -11,8 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta property="og:url"          content="{{URL::to('/')}}" />
     <meta property="og:title"        content="YWC Reunion8" />
-    <meta property="og:description"  content="เพราะค่ายไม่มีวันจบ เราเลยต้องมาพบกันใหม่" />
+    <meta property="og:description"  content="เพราะเข้าค่ายแล้วไม่มีวันจบ เลยต้องกลับมาพบกันใหม่" />
     <meta property="og:image"        content="{{URL::to('/')}}/img/fb.jpg" />
+    <meta property="fb:app_id" content="{{env('FACEBOOK_APP_ID', '') }}" />
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
