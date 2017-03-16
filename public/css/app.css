@@ -9205,6 +9205,12 @@ optgroup {
   font-size: 1.9em;
 }
 
+@media (max-width: 767px) {
+  .timeline-description {
+    top: 0.3 0.8em;
+  }
+}
+
 /*timeline-events*/
 
 .timeline-events {
@@ -9296,6 +9302,12 @@ optgroup {
   font-size: 2em;
   padding: 1em;
   margin-top: 2.4em;
+}
+
+@media (max-width: 767px) {
+  .location .map p {
+    font-size: 1.5em;
+  }
 }
 
 #register #generation {

@@ -625,6 +625,10 @@ optgroup {
     color: black;
     font-weight: 400;
     font-size: 1.9em;
+
+	@media (max-width: $screen-xs-max) {
+		 top: 0.3.8em;
+	}
 }
 
 
@@ -698,7 +702,7 @@ optgroup {
 		.textover {
 			font-size: 3.5em;
 		}
-	}
+   }
 
 	.map {
 		background-image: $url_location_tag;
@@ -711,6 +715,9 @@ optgroup {
 			font-size: 2em;
 			padding: 1em;
 			margin-top: 2.4em;
+			@media (max-width: $screen-xs-max) {
+				font-size: 1.5em;
+			}
 		}
 		
 	}
