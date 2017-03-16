@@ -9,7 +9,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <meta property="og:url"          content="{{URL::to('/')}}" />
+    <meta property="og:title"        content="YWC Reunion8" />
+    <meta property="og:description"  content="เพราะค่ายไม่มีวันจบ เราเลยต้องมาพบกันใหม่" />
+    <meta property="og:image"        content="{{URL::to('/')}}/img/fb.jpg" />
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
