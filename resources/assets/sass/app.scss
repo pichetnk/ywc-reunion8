@@ -60,6 +60,7 @@ optgroup {
 #team {
 	.profile {
 		padding-top: 2em;
+		padding-bottom: 6em;
 	}
 }
 
@@ -323,11 +324,11 @@ optgroup {
 			font-size: 1.2em;
 		}
 		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-			top: -9.1em;
+			top: -11.2em;
 			font-size: 1.8em;
 		}
 		@media (min-width: $screen-lg-min) {
-			top: -9.1em;
+			top: -11.2em;
 			font-size: 1.8em;
 		}
 		text-align: center;
@@ -696,6 +697,7 @@ optgroup {
 
 .btn-order {
 	width:  100%;
+	padding-top: 5em;
 	.btn-col{
 		width:  40%;
 		margin: 0 auto;
