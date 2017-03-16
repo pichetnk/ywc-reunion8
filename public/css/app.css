@@ -8762,13 +8762,13 @@ optgroup {
 }
 
 @media (min-width: 768px) {
-  .fb-login .fb-btn:hover {
+  .fb-login .fb-btn {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width: 767px) {
-  .fb-login .fb-btn:hover {
+  .fb-login .fb-btn {
     font-size: 0.7rem;
   }
 }
