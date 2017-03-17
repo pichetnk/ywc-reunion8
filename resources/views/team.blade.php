@@ -6,7 +6,7 @@
   </div>
   
   <div class="row profile">
-    <div class="col-lg-4 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="col-lg-4 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 above-bg">
 
       @include('profileimage')
     </div>
@@ -19,7 +19,7 @@
 
             </div>
         </div>
-         <div class="btn-order">
+         <div class="btn-order above-bg">
                 <div class="btn-col">
                              <div class="btn-box">
                                         <div class="btn-box-border"></div>
@@ -52,7 +52,7 @@
 
 
               @foreach ($teamRed as $user)
-              <div class="member">
+              <div class="member above-bg">
 
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
@@ -87,7 +87,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 
               @foreach ($teamBlue as $user)
-              <div class="member">
+              <div class="member above-bg">
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
@@ -120,7 +120,7 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
               @foreach ($teamGreen as $user)
-              <div class="member">
+              <div class="member above-bg">
 
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
@@ -155,7 +155,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 
               @foreach ($teamOrange as $user)
-              <div class="member">
+              <div class="member above-bg">
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
@@ -185,7 +185,7 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
               @foreach ($teamYellow as $user)
-              <div class="member">
+              <div class="member above-bg">
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
