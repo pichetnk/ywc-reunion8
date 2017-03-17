@@ -4,7 +4,7 @@
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
       <div class="text-center">
         <!-- แก้ logo ไม่กลางด้วยการใส่ display: inline แล้วครอบด้วย div ให้เป็น block อีกที -->
-        <img src="img/logo.svg" alt=" " class="img-responsive" style="display: inline;">
+        <img src="img/ywc-reunion8.gif" alt=" " class="img-responsive" style="display: inline;width: 100% height: auto;">
       </div>
 
       <div class="fb-login">
