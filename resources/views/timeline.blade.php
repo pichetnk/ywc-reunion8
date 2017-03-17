@@ -30,7 +30,7 @@
                 <div class="timeline-center-dot"></div>
             </div>
         </div>
-        <div class="col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
+        <div class="col-md-5 col-md-offset-0 col-xs-10">
             <div class="timeline">
                 <div class="timeline-times">
                     <div class="timeline-times-each">
