@@ -5,7 +5,7 @@
                                 <div class="pic-frame-border-out"></div>
                                 <div class="pic-frame-icon"></div>
                               
-                                <img src="//graph.facebook.com/{{ Auth::user()->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                                <img src="//graph.facebook.com/{{ Auth::user()->facebook_id }}/picture?width=250&height=250" class="pic-frame-pic">
                                 <div class="pic-frame-border-in"></div>
                             </div>
                         </div>
