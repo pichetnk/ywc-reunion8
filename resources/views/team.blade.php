@@ -56,13 +56,18 @@
          </div>
     </div>
   </div>
-  <div class="row team-timeline">
-    <div class="col-md-12"> 
-        <div class=" above-bg">       
-           @include('timelinecontent')
-        </div>
-    </div>
+
+  <div class="row team-timeline"> 
+    <div class="team-timeline-boder">
+          <div class="bg"></div>
+    </div>    
+      <div class="col-md-12"> 
+          <div class="team-timeline-content above-bg">       
+            @include('timelinecontent')
+          </div>
+      </div>
   </div>
+
   <div class="row team">
     <div class="col-md-12">
       <div class="row team-red">

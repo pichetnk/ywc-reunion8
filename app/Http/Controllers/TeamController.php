@@ -41,8 +41,12 @@ class TeamController extends Controller
         } 
         
 
-
-         
+          /* $teamRed=[];
+        $teamBlue=[];
+        $teamGreen=[];
+        $teamOrange=[];
+        $teamYellow=[];*/
+      
         $teamRed= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'r')
                                   ->orderBy('generation', 'asc')->get();

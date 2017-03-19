@@ -8563,9 +8563,29 @@ optgroup {
 }
 
 #team .team-timeline {
+  background-color: #dddddd;
+}
+
+#team .team-timeline-content {
   padding-top: 2em;
   padding-bottom: 6em;
-  background-color: #dddddd;
+}
+
+#team .team-timeline-boder {
+  position: relative;
+  min-height: 20px;
+}
+
+#team .team-timeline-boder .bg {
+  background-image: url(/images/section_bar.png?199743f683a4daf71b064be9ed8f7c25);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: left 1em top;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .textCenter {
@@ -9320,7 +9340,7 @@ optgroup {
           transform: rotate(-6deg);
 }
 
-.location .map p {
+.location .map .map-content {
   text-align: center;
   font-size: 2em;
   padding: 1em;
@@ -9328,7 +9348,7 @@ optgroup {
 }
 
 @media (max-width: 767px) {
-  .location .map p {
+  .location .map .map-content {
     font-size: 1.5em;
   }
 }

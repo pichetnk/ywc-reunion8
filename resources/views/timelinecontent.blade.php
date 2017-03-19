@@ -1,29 +1,21 @@
 <div class="row">
-
     <div class="col-md-2 col-md-offset-5">
             <img src="/img/timeline.svg" class="img-responsive">
     </div>
 </div>
-
 <div class="row">
-
         <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
             <a href="http://www.e88bangkok.com/" target="_blank">
-             <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
+                 <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
              </a>
             <div class="location">
                 
                 <div class="map">
-                      <p>
-                      E88 Bangkok,Sukhumvit 69-71 <br>
-                     
-                      </p>
+                     <div class="map-content"> E88 Bangkok,Sukhumvit 69-71 </div>                    
                 </div>
                 <div class="location-label">
-                <span class="textover">
-                            Location
-                 </span>
-                 </div>
+                    <span class="textover">  Location </span>
+                </div>
             </div>
         </div>
         <div class="col-md-2 visible-lg-block">
@@ -123,8 +115,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                 </div>
+             </div>
           
         </div>       
+</div>
 </div>
