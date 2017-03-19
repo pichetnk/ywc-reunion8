@@ -8562,6 +8562,32 @@ optgroup {
   padding-bottom: 6em;
 }
 
+#team .team-timeline {
+  background-color: #dddddd;
+}
+
+#team .team-timeline-content {
+  padding-top: 2em;
+  padding-bottom: 6em;
+}
+
+#team .team-timeline-boder {
+  position: relative;
+  min-height: 20px;
+}
+
+#team .team-timeline-boder .bg {
+  background-image: url(/images/section_bar.png?199743f683a4daf71b064be9ed8f7c25);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: left 1em top;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .textCenter {
   text-align: center;
 }
@@ -9316,7 +9342,7 @@ optgroup {
           transform: rotate(-6deg);
 }
 
-.location .map p {
+.location .map .map-content {
   text-align: center;
   font-size: 2em;
   padding: 1em;
@@ -9324,7 +9350,7 @@ optgroup {
 }
 
 @media (max-width: 767px) {
-  .location .map p {
+  .location .map .map-content {
     font-size: 1.5em;
   }
 }
@@ -9340,20 +9366,25 @@ optgroup {
 }
 
 .btn-order .btn-col {
-  width: 40%;
+  width: 70%;
   margin: 0 auto;
 }
 
 @media (max-width: 767px) {
   .btn-order .btn-col {
-    width: 65%;
+    width: 80%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .btn-order .btn-col {
-    width: 65%;
+    width: 80%;
   }
+}
+
+.btn-order img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .team-show {
