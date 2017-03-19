@@ -4,34 +4,34 @@
   <div class="team-bg">
     <div class="team-bg-img"></div>
   </div>
-  
+
   <div class="row profile">
     <div class="col-lg-4 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 above-bg">
 
       @include('profileimage')
     </div>
     <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-team">
-        <div class="team-show">
-            <img src="/img/{{$teamImg}}.svg" class="img-responsive">
-            <div class="profile-name">
+      <div class="team-show">
+        <img src="/img/{{$teamImg}}.svg" class="img-responsive">
+        <div class="profile-name">
 
-              {{$userDetail->nickname}} @if ( $userDetail->generation == 0)  #สมาคม @else #YWC{{$userDetail->generation}} @endif
+          {{$userDetail->nickname}} @if ( $userDetail->generation == 0) #สมาคม @else #YWC{{$userDetail->generation}} @endif
 
-            </div>
         </div>
-         <div class="btn-order above-bg">
-                <div class="btn-col">
-                             <div class="btn-box">
-                                        <div class="btn-box-border"></div>
-                                        <div class="btn-box-bg"></div>
-                                    
-                                        <div class="btn-box-label" > 
-                                            <div class="btn-box-content" >
-                                                <a  href="http://goo.gl/asrcu7"  target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
-                                        </div>
-                                </div>   
-                              </div> 
-         </div>
+      </div>
+      <div class="btn-order above-bg">
+        <div class="btn-col">
+          <div class="btn-box">
+            <div class="btn-box-border"></div>
+            <div class="btn-box-bg"></div>
+
+            <div class="btn-box-label">
+              <div class="btn-box-content">
+                <a href="http://goo.gl/asrcu7" target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
@@ -58,7 +58,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"> </div>
 
-                  <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="row buttomTeam"></div>
-        </div>     
+        </div>
       </div>
 
       <div class="row team-blue">
@@ -92,7 +92,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -100,7 +100,7 @@
                   {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
                 </div>
               </div>
-              
+
               @endforeach
 
             </div>
@@ -125,8 +125,8 @@
                 <div class="pic-frame">
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
-                  
-                  <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
 
                   <div class="pic-frame-border-in"></div>
 
@@ -160,7 +160,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -190,11 +190,11 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <img src="//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large" class="pic-frame-pic">
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
-              <div class="labal-name">
+                <div class="labal-name">
                   {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
                 </div>
               </div>
