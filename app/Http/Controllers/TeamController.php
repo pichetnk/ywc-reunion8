@@ -45,23 +45,23 @@ class TeamController extends Controller
          
         $teamRed= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'r')
-                                  ->orderBy('generation', 'desc')->get();
+                                  ->orderBy('generation', 'asc')->get();
 
         $teamBlue= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'b')
-                                  ->orderBy('generation', 'desc')->get();
+                                  ->orderBy('generation', 'asc')->get();
 
         $teamGreen= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'g')
-                                  ->orderBy('generation', 'desc')->get();
+                                  ->orderBy('generation', 'asc')->get();
 
         $teamOrange= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'o')
-                                  ->orderBy('generation', 'desc')->get();
+                                  ->orderBy('generation', 'asc')->get();
 
         $teamYellow= DB::table('user_details')->select('facebook_id','nickname','team','group','generation')
                                   ->where('team', 'y')
-                                  ->orderBy('generation', 'desc')->get();
+                                  ->orderBy('generation', 'asc')->get();
                             
  
        return view('team' , [
