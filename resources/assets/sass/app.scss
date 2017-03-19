@@ -63,6 +63,11 @@
  		padding-top: 2em;
  		padding-bottom: 6em;
  	}
+	.team-timeline {
+		padding-top: 2em;
+ 		padding-bottom: 6em;
+		background-color: $color_bg_timeline_team;
+	}
  }
  
  .textCenter {
@@ -727,14 +732,17 @@
  	padding-top: 5em;
  	.btn-col {
  		@media (max-width: $screen-xs-max) {
- 			width: 65%;
+ 			width: 80%;
  		}
  		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
- 			width: 65%;
+ 			width: 80%;
  		}
- 		width : 40%;
+ 		width : 70%;
  		margin: 0 auto;
  	}
+	img:hover {
+		 transform: scale(1.1);
+	}
  }
  
  .team-show {

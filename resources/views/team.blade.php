@@ -11,29 +11,56 @@
       @include('profileimage')
     </div>
     <div class="col-lg-4 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-team">
-        <div class="team-show">
-            <img src="/img/{{$teamImg}}.svg" class="img-responsive">
-            <div class="profile-name">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="team-show">
+                <img src="/img/{{$teamImg}}.svg" class="img-responsive">
+                <div class="profile-name">
 
-              {{$userDetail->nickname}} @if ( $userDetail->generation == 0)  #สมาคม @else #YWC{{$userDetail->generation}} @endif
+                  {{$userDetail->nickname}} @if ( $userDetail->generation == 0)  #สมาคม @else #YWC{{$userDetail->generation}} @endif
 
+                </div>
             </div>
+          </div>
         </div>
-         <div class="btn-order above-bg">
-                <div class="btn-col">
-                             <div class="btn-box">
-                                        <div class="btn-box-border"></div>
-                                        <div class="btn-box-bg"></div>
-                                    
-                                        <div class="btn-box-label" > 
-                                            <div class="btn-box-content" >
-                                                <a  href="http://goo.gl/asrcu7"  target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
-                                        </div>
-                                </div>   
-                              </div> 
+        <div class="row">
+          <div class="col-md-12">
+                  {{--
+                  <div class="btn-order above-bg">
+                          <div class="btn-col">
+                                      <div class="btn-box">
+                                                  <div class="btn-box-border"></div>
+                                                  <div class="btn-box-bg"></div>
+                                              
+                                                  <div class="btn-box-label" > 
+                                                      <div class="btn-box-content" >
+                                                          <a  href="http://goo.gl/asrcu7"  target="_blank"> สั่งซื้อของที่ระลึก </a> </div>
+                                                  </div>
+                                          </div>   
+                          </div> 
+                          <img src="/img/btn_order.png" class="img-responsive"> 
+                  </div>
+
+                  --}}
+         <div class="btn-order above-bg ">
+              <div class="btn-col">
+                  <div class="btn-box">
+                    <a  href="http://goo.gl/asrcu7"  target="_blank">
+                     <img src="/img/btn_order.png" class="img-responsive "> 
+                    </a>
+                 </div>
+              </div>
          </div>
 
-
+         </div>
+         </div>
+    </div>
+  </div>
+  <div class="row team-timeline">
+    <div class="col-md-12"> 
+        <div class=" above-bg">       
+           @include('timelinecontent')
+        </div>
     </div>
   </div>
   <div class="row team">
@@ -63,7 +90,9 @@
                   <div class="pic-frame-border-in"></div>
                 </div>
                 <div class="labal-name">
-                  {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+                 
+                  {{$user->nickname}} @if ( $user->generation == 0)  #สมาคม @else #{{$user->generation}} @endif
+
                 </div>
               </div>
               @endforeach
@@ -97,7 +126,8 @@
                   <div class="pic-frame-border-in"></div>
                 </div>
                 <div class="labal-name">
-                  {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+                  {{$user->nickname}} @if ( $user->generation == 0)  #สมาคม @else #{{$user->generation}} @endif
+
                 </div>
               </div>
               
@@ -132,7 +162,8 @@
 
                 </div>
                 <div class="labal-name">
-                  {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+                   {{$user->nickname}} @if ( $user->generation == 0)  #สมาคม @else #{{$user->generation}} @endif
+
                 </div>
               </div>
               @endforeach
@@ -165,7 +196,8 @@
                   <div class="pic-frame-border-in"></div>
                 </div>
                 <div class="labal-name">
-                  {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+                  {{$user->nickname}} @if ( $user->generation == 0)  #สมาคม @else #{{$user->generation}} @endif
+
                 </div>
               </div>
               @endforeach
@@ -195,7 +227,8 @@
                   <div class="pic-frame-border-in"></div>
                 </div>
               <div class="labal-name">
-                  {{ $user->nickname }} @if ($user->generation !=0 ) #{{$user->generation}} @endif
+                   {{$user->nickname}} @if ( $user->generation == 0)  #สมาคม @else #{{$user->generation}} @endif
+
                 </div>
               </div>
               @endforeach
