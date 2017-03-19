@@ -404,8 +404,11 @@
  		margin: 3em 0.6em 1em 0.6em;
  		width: 10em;
  		height: 10em;
- 		background-size: cover;
- 		background-position: center; 
+ 		background-size: contain;
+ 		background-position: center;
+		background-repeat: no-repeat;
+		background-color: white;
+  
  	}
  }
  

@@ -90,7 +90,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"> </div>
 
-                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?width=250&height=250')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -126,7 +126,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?width=250&height=250')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -161,7 +161,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?width=250&height=250')"></div>
 
                   <div class="pic-frame-border-in"></div>
 
@@ -196,7 +196,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?width=250&height=250')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
@@ -227,7 +227,7 @@
                   <div class="pic-frame-border-out"></div>
                   <div class="pic-frame-icon"></div>
 
-                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?type=large')"></div>
+                  <div class="pic-frame-pic" style="background-image: url('//graph.facebook.com/{{ $user->facebook_id }}/picture?width=250&height=250')"></div>
 
                   <div class="pic-frame-border-in"></div>
                 </div>
