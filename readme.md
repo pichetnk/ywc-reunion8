@@ -6,17 +6,17 @@ cd docker
 docker-compose build && docker-compose pull
 
 # install composer dependencies
-docker-compose run --rm composer install
+UID=${UID} docker-compose run --rm composer install
 # set the permission (if can't just sudo)
 chmod 777 -R storage bootstrap/cache
 # install node dependencies
-docker-compose run --rm npm install
+UID=${UID} docker-compose run --rm npm install
 
 (create your own .env; mysql-host=mysql; user=root; password=root)
 # start mysql
 docker-compose up -d mysql
 # migrate the db
-docker-compose run --rm php artisan migrate
+UID=${UID} docker-compose run --rm php artisan migrate
 
 # start the web
 docker-compose up -d web

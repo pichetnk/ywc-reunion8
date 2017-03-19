@@ -21,25 +21,31 @@ services:
     volumes:
       - ./mysql-data:/var/lib/mysql
 
+  test:
+    extends: npm
+    entrypoint: gosu ${UID}:${UID} touch
+    command: a
+
   watch:
-    image: node:latest
-    entrypoint: npm run watch
-    working_dir: /app
-    volumes:
-      - ../:/app
+    extends: npm
+    entrypoint: gosu ${UID}:${UID} npm run watch
 
   # be run at runtime
   composer:
-    image: composer:latest
-    entrypoint: composer
+    build: 
+      context: .
+      dockerfile: composer.Dockerfile
+    entrypoint: gosu ${UID}:${UID} composer
     command: install
     working_dir: /app
     volumes:
       - ../:/app
 
   npm:
-    image: node:latest
-    entrypoint: npm
+    build: 
+      context: .
+      dockerfile: node.Dockerfile
+    entrypoint: gosu ${UID}:${UID} npm
     command: install
     working_dir: /app
     volumes:
@@ -49,7 +55,7 @@ services:
     build:
       context: .
       dockerfile: php-mysql-apache.Dockerfile
-    entrypoint: php
+    entrypoint: gosu ${UID}:${UID} php
     working_dir: /app
     volumes:
       - ../:/app
