@@ -1,13 +1,15 @@
 <div class="row">
-    <div class="col-md-2 col-md-offset-5">
+    <div class="timeline-bander col-md-2 col-md-offset-5">
             <img src="/img/timeline.svg" class="img-responsive">
     </div>
 </div>
 <div class="row">
         <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
-            <a href="http://www.e88bangkok.com/" target="_blank">
-                 <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
-             </a>
+            <div class="timeline-map">
+                <a href="http://www.e88bangkok.com/" target="_blank">
+                    <img src="/img/MAP-E88-04.jpg" class="img-responsive img-map">
+                </a>
+             </div>
             <div class="location">
                 
                 <div class="map">

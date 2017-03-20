@@ -579,6 +579,13 @@
  	}
  }
  
+ .timeline-bander {
+	 padding-top: 1em;
+	 padding-bottom: 2em;
+ }
+ .timeline-map {
+	 padding-top: 2em;
+ }
  .timeline {
  	display: inline-block;
  	position: relative;
@@ -773,4 +780,29 @@
  
  .team-show {
  	width: 100%;
+ }
+
+
+ .home-text {
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+ 	
+	transform: rotate(-2deg);
+	color: white;
+ 	-webkit-text-stroke: 0.1px $black;
+	  font-weight: bold;
+	.normal {
+			font-size: 2.8em;
+	}
+	.highlight {
+			font-size: 1.4em;
+	}
+ }
+ .home-date {
+	transform: rotate(-2deg);		
+ }
+ .home-loaction {
+	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+	font-size: 2em;
+	transform: rotate(-2deg);
+	color: $black;
  }

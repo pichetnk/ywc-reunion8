@@ -9173,6 +9173,15 @@ optgroup {
   height: 3em;
 }
 
+.timeline-bander {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.timeline-map {
+  padding-top: 2em;
+}
+
 .timeline {
   display: inline-block;
   position: relative;
@@ -9391,4 +9400,34 @@ optgroup {
 
 .team-show {
   width: 100%;
+}
+
+.home-text {
+  font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  color: white;
+  -webkit-text-stroke: 0.1px black;
+  font-weight: bold;
+}
+
+.home-text .normal {
+  font-size: 2.8em;
+}
+
+.home-text .highlight {
+  font-size: 1.4em;
+}
+
+.home-date {
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+.home-loaction {
+  font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+  font-size: 2em;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  color: black;
 }
