@@ -75,7 +75,7 @@
         <div class="team-timeline-boder">
           <div class="bg"></div>
     </div>    
-      <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 team-sponsor-content">
+      <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 team-sponsor-content above-bg">
          @include('sponsor')   
       </div>
   </div>
