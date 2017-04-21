@@ -63,7 +63,10 @@
  		padding-top: 2em;
  		padding-bottom: 6em;
  	}
-	 
+	.team-sponsor-content {
+		padding-top: 2em;
+ 		padding-bottom: 4em;
+	}
 	.team-timeline {	
 		background-color: $color_bg_timeline_team; 	 
 	}
@@ -806,3 +809,34 @@
 	transform: rotate(-2deg);
 	color: $black;
  }
+
+
+ #sponsor {
+	 padding-top: 2em;
+	 padding-bottom: 2em;
+ }
+ 
+
+ .text-sponser {
+	font-size: 3.5em;
+ 	font-family: "DBHelvethaicaXMed", Fallback, DBHelvethaicaXMed;
+ }
+.sponsor { 	 
+	margin: 0 auto;	
+    display: table;
+	.sponsor-item {
+	 	display: table-cell;
+    	vertical-align: middle;
+	
+	}
+ }
+ 
+.sponsor-15 {
+	max-width: 10em;
+}
+.sponsor-10 {
+	max-width: 9em;
+}
+.sponsor-5 {
+	max-width: 7em;
+}

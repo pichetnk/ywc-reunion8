@@ -16,7 +16,7 @@
                <div class="text-center">
                 <div class="home-text">
                   <span class="normal">เพราะ<span class="highlight">เข้าค่าย</span>แล้วไม่มีวันจบ เลยต้องกลับมา<span class="highlight">พบกันใหม่</span></span>
-                             </div>         
+                </div>         
               </div>
           </div>
       </div>
@@ -41,8 +41,14 @@
           </div>
       </div>
       
-       </div>
+    </div>
+  
+  
+  
   </div>
+
+
+
 <div class="row">
     <div class="normal col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
       <div class="fb-login">
@@ -66,5 +72,17 @@
 
     </div>
   </div>
+
+
+  <div class="row" id="sponsor">
+      <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+         @include('sponsor')   
+      </div>
+  </div>
+
+
+
 </div>
+
+
 @endsection
