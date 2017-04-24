@@ -15,11 +15,7 @@
                       <img src="img/sponsor/we.png" class="img-responsive sponsor-15" alt="Winter Egency">
                   </a>
                   </div>
-                  <div class="sponsor-item">
-                  <a href="http://www.tnyshipping.com"  tager="_blank" >
-                      <img src="img/sponsor/tny.png" class="img-responsive sponsor-15" alt="TNY Shipping">
-                  </a>
-                  </div>
+
                   <div class="sponsor-item">
                   <a href="http://www.uppercuz.com"  tager="_blank" >
                       <img src="img/sponsor/upper.png" class="img-responsive sponsor-15" alt="TNY Shipping">
