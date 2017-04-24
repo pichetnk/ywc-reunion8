@@ -44,9 +44,15 @@
                           <img src="img/sponsor/webmaster.png" class="img-responsive sponsor-10" alt="Thai Webmaster Association">
                       </a>
                       </div>
+                      
                       <div class="sponsor-item">
                       <a href="https://www.pantip.com"  tager="_blank" >
                           <img src="img/sponsor/pantip.png" class="img-responsive sponsor-10" alt="Pantip">
+                      </a>
+                      </div>
+                       <div class="sponsor-item">
+                      <a href="#"  tager="_blank" >
+                          <img src="img/sponsor/sponsor1.png" class="img-responsive sponsor-10" alt="พี่เชนและผองเพื่อน">
                       </a>
                       </div>
                      </div>
