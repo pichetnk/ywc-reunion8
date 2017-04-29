@@ -247,6 +247,18 @@ class ApiController extends Controller
     }
 
 
+    public function getComeEvent(){
+    
+      $data= DB::table('user_details')->select('facebook_id as facebookid','nickname as name','team','generation')
+                                  ->where('come_event', 'Y')
+                                  ->get();
+
+        
+      return response()->json($data, 200 );
+
+    }
+
+
 
 
 

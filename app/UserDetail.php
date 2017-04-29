@@ -16,7 +16,7 @@ class UserDetail extends Model
      * @var array
      */
     protected $fillable = [
-        'id','facebook_id','nickname','team','group','generation','join_event'
+        'id','facebook_id','nickname','team','group','generation','join_event','come_event'
     ];
 
 

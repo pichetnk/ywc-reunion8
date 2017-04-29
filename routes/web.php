@@ -45,3 +45,4 @@ Route::get('/team',['uses' => 'TeamController@show'])->name('team');
 Route::get('/profile',['uses' => 'TeamController@profile'])->name('profile');
 Route::get('/shop',['uses' => 'ShopController@shop'])->name('shop');
 Route::post('/register',  'ApiController@register' );
+Route::get('/listUser',  'ApiController@getComeEvent' );
